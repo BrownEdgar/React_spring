@@ -1,0 +1,40 @@
+img {
+  width: 350px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1d1d1d;
+  padding: 1em;
+  gap: 30px;
+  color: #fff;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: orangered;
+
+}
+
+.content p {
+  line-height: 1.6;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-indent: 20px;
+
+}
+
+.content button {
+  padding: 0.6rem 1rem;
+  border: 0;
+  background-color: #ff0404;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 6px;
+  width: 180px;
+}
