@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./public/img/1.jpg");
+}
+.box h1 {
+  color: aliceblue;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+.left {
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  color: aliceblue;
+}
+img {
+  width: 50%;
+  margin-right: 30px;
+}
+.text ul {
+  list-style: circle;
+  padding: 20px;
+}
