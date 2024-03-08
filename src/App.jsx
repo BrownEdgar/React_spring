@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
+import Catalog from './components/HW5/Catalog'
 
 
 export default function App() {
   return (
-    <div>
-      <h1>test</h1>
-    </div>
+    <Catalog/>
+    
   )
 }
