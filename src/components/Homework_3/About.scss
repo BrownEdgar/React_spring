@@ -1,0 +1,34 @@
+.About{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px;
+    &__item{
+      position: relative;
+      flex-basis: 33%;
+      display: flex;
+      justify-content: space-evenly;
+      img{
+        width: 350px;
+        height: 350px;
+        position: relative;
+        object-fit: cover;
+        z-index: 0;
+      }
+    }
+    &__info{
+      position: absolute;
+      left: 0;
+    }
+    &__title{
+        font-size: 36px;
+        font-family: monospace;
+        color: darkblue;
+    }
+    &__text{
+        font-size: 20px;
+        font-family: monospace;
+        color: darkblue;
+        border-bottom: 2px solid darkblue;
+    }
+  }
