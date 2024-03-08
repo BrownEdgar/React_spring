@@ -1,0 +1,66 @@
+.About {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  padding: 24px 200px;
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 235px;
+}
+
+.user_container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  gap: 24px;
+}
+
+.image_container img {
+  width: 400px;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: auto;
+}
+
+.user_info ul {
+  text-align: left;
+  margin-left: 1em;
+  font-size: 14px;
+}
+
+.first_paragraph {
+  font-size: 18px;
+}
+
+.second_paragraph {
+  font-size: 10px;
+}
+
+.icon {
+  font-size: 40px;
+  color: black;
+  transition: 0.3s;
+}
+
+.left {
+  margin-left: -235px;
+}
+
+.right {
+  margin-right: -235px;
+}
+
+.icon:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
