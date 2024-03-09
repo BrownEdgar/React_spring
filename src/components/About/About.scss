@@ -1,0 +1,15 @@
+.About{
+    width: 900px;
+    margin: 100px auto;
+    padding: 2em;
+    background-color: black;
+    &__title{
+        text-align: center;
+        color: orange;
+    }
+    &__content{
+        display: flex;
+        gap: 36px;
+        
+    }
+}
