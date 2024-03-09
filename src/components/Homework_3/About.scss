@@ -7,7 +7,6 @@
       position: relative;
       flex-basis: 33%;
       display: flex;
-      justify-content: space-evenly;
       img{
         width: 350px;
         height: 350px;
@@ -19,14 +18,17 @@
     &__info{
       position: absolute;
       left: 0;
+      top: 0;
     }
     &__title{
         font-size: 36px;
         font-family: monospace;
         color: darkblue;
+        margin: 10px;
     }
     &__text{
         font-size: 20px;
+        margin: 10px;
         font-family: monospace;
         color: darkblue;
         border-bottom: 2px solid darkblue;

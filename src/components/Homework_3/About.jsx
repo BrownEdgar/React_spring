@@ -29,7 +29,7 @@ export default function About() {
           return(
             <div className='About__item' key={elm.id}>
               <img src={elm.images} alt={elm.title} />
-              <div className='Abot__info'>
+              <div className='About__info'>
                 <h2 className='About__title'>{elm.title}</h2>
                 <p className='About__text'>{elm.text}</p>
               </div>
