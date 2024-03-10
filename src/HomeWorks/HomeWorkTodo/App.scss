@@ -1,0 +1,58 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 40px;
+  &__title {
+    text-align: center;
+  }
+  &__stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #e74c3c;
+    transition: 0.3s;
+    &-done {
+      background-color: #2ecc71;
+    }
+    &:hover {
+      scale: 1.03;
+      cursor: pointer;
+    }
+  }
+  &__actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__button {
+    border-radius: 8px;
+    padding: 4px 8px;
+    color: #2ecc71;
+    border: 0;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &-sort {
+      width: 120px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      background-color: #3498db;
+      color: white;
+    }
+    &-delete {
+      color: #e74c3c;
+    }
+  }
+}
