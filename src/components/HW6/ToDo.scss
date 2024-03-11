@@ -1,0 +1,102 @@
+.ToDo {
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    color: rgb(39, 39, 150);
+    font-size: 5em;
+  }
+  &__panel {
+    background-color: rgb(72, 72, 72);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    margin-left: 30px;
+    align-items: center;
+  }
+  &__checkButton {
+    cursor: pointer;
+    padding: 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    &-green {
+      background-color: rgb(9, 113, 9);
+    }
+    &-red {
+      background-color: rgb(198, 13, 13);
+    }
+    &-sort{
+        background-color: green;
+    }
+  }
+  &__completedTexts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 15px;
+    p {
+      color: white;
+      font-size: 20px;
+    }
+    span {
+      background-color: blue;
+      color: white;
+      padding: 8px;
+
+      border-radius: 3px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  &__item {
+    width: calc(33% - 40px);
+    height: 120px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    
+    &-completed::after {
+        content: "";
+        background-color: green;
+        border-radius: 50%;
+        border: 0;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        top:10px;
+
+    }
+    &-unCompleted::after {
+        content: "";
+        background-color: rgb(128, 0, 0);
+        border-radius: 50%;
+        border: 0;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        top:10px;
+    }
+    
+
+  }
+}

@@ -1,11 +1,11 @@
-.Catalog{
-   display: flex;
-   flex-direction: row;
-   gap: 50px;
-   margin-top: 300px;
-   font-size: 28px;
-   color: rgb(17, 54, 145);
-   &__info{
+.Catalog {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 300px;
+  font-size: 28px;
+  color: rgb(17, 54, 145);
+  &__info {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -13,17 +13,17 @@
     margin-top: 10%;
     margin-left: 5%;
   }
-  &__item{
+  &__item {
     position: relative;
   }
-  &__title{
+  &__title {
     margin-bottom: 5px;
   }
-  img{
+  img {
     position: relative;
     z-index: 01;
   }
-  &__text{
-    border-bottom: 1px solid rgb(17, 54, 145) ;
+  &__text {
+    border-bottom: 1px solid rgb(17, 54, 145);
   }
 }
