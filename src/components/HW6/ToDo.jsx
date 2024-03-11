@@ -43,6 +43,12 @@ export default function ToDo() {
     });
     setTodos(result);
   };
+  const reverseEortByCheck = () => {
+    const result = todos.toSorted((a, b) => {
+      return a.completed - b.completed;
+    });
+    setTodos(result);
+  };
 
   return (
     <div className="ToDo">
@@ -72,6 +78,12 @@ export default function ToDo() {
             onClick={sortByCheck}
           >
             Sort by Check
+          </button>
+          <button
+            className="ToDo__checkButton ToDo__checkButton-sort"
+            onClick={reverseEortByCheck}
+          >
+            Sort by Check revers
           </button>
         </div>
         <div className="ToDo__completedTexts">
