@@ -47,7 +47,7 @@ export default function ToDo() {
     const result = todos.toSorted((a, b) => {
       return a.completed - b.completed;
     });
-    setTodos(result);
+    setTodos( result.reverse());
   };
 
   return (
