@@ -13,7 +13,7 @@ function App() {
  
   
     getData()
-  },[posts] )
+  },[] )
 
 
 function removeBtn(id){
@@ -23,12 +23,12 @@ const result = posts.filter(elem =>{
 setPosts(result)
 }
 
-const delete40 = (id) =>{
-    const del40 = posts.filter(elem =>{
-        return elem.id > 50 || elem.id < 40
-    })
-    console.log(del40);
-    setPosts(del40)
+const delete40 = () => {
+  const filteredPosts = posts.filter(elem => {
+      return elem.id >= 40 && elem.id <= 60;
+  });
+  console.log(filteredPosts);
+  setPosts(filteredPosts);
 }
 
   return (
@@ -42,7 +42,7 @@ const delete40 = (id) =>{
               <h2>{elem.title}</h2>
               <p>{elem.body}</p>
               <span>{elem.id}</span>
-              <button onClick={removeBtn}>&#10006;</button>
+              <button onClick={()=>{removeBtn(elem.id)}}>&#10006;</button>
             </div>
           );
         })}
