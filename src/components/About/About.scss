@@ -1,0 +1,127 @@
+.About {
+    h1 {
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: oblique;
+        margin-left: 40px;
+        color: #fff;
+        text-shadow: 5px 5px orangered;
+        text-align: center;
+    }
+    &__but {
+        display: flex;
+        gap: 20px;
+    }
+    &__checkBut {
+        cursor: pointer;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: oblique;
+        font-size: 20px;
+        background-color: #fff;
+        margin:auto;
+
+        &-true {
+            color: green;
+            border: 2px solid darkgreen;
+            box-shadow: 10px 5px 5px darkgreen;
+        }
+
+        &-false {
+            color: red;
+            border: 2px solid darkred;
+            box-shadow: 10px 5px 5px darkred;
+        }
+
+        &-sort {
+            color: orangered;
+            border: 2px solid rgba(210, 102, 1, 0.813);
+            box-shadow: 10px 5px 5px rgba(210, 102, 1, 0.813);
+        }
+        &-ft{
+            color: transparent;
+            background-clip: text;
+            border: 2px solid rgb(218, 53, 12);
+            background-image: linear-gradient(to right, red, orange, green, yellow);
+            box-shadow: 10px 5px 5px rgb(218, 53, 12);
+        }
+        &-tf{
+            color: transparent;
+            background-clip: text;
+            border: 2px solid green;
+            background-image: linear-gradient(to left, red, orange, green, yellow);
+            box-shadow: 10px 5px 5px green;
+        }
+    }
+}
+
+.Todos {
+    color: #000;
+    padding: 20px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: oblique;
+    }
+    &__title{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 300px;
+
+    }
+     &__item {
+        flex: 1 1 30%;
+        border: 2px solid orangered;
+        border-radius: 20px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 171, 0, 0.9585084033613446) 0%, rgba(255, 124, 1, 1) 27%, rgba(255, 69, 2, 1) 100%, rgba(196, 148, 59, 1) 100%, rgba(118, 144, 137, 1) 100%, rgba(0, 212, 255, 1) 100%, rgba(146, 121, 114, 1) 100%, rgba(0, 212, 255, 1) 100%);
+        color: #fff;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        position: relative;
+
+        &-true::after {
+            content: '';
+            background-color: green;
+            color: green;
+            border: 2px solid darkgreen;
+            box-shadow: 10px 5px 5px #fff;
+            border-radius: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+        }
+
+        &-false::after {
+            content: '';
+            background-color: red;
+            color: red;
+            border: 2px solid darkred;
+            box-shadow: 10px 5px 5px #fff;
+            border-radius: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+        }
+
+        &-sort {
+            content: '';
+            background-color: #fff;
+            color: orangered;
+            border: 2px solid rgba(210, 102, 1, 0.813);
+            box-shadow: 10px 5px 5px rgba(210, 102, 1, 0.813);
+            border-radius: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
