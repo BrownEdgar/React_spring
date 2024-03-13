@@ -33,7 +33,6 @@ export default function App() {
     if (activeSlide === 1) {
       return;
     }
-    console.log(activeSlide);
     setActiveSlide(activeSlide - 1);
   };
 
