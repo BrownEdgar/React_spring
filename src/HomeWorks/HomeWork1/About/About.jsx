@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./About.css";
 
 export default function About() {
@@ -14,7 +13,6 @@ export default function About() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       listItems: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
       photoURL: "./public/photo1.jpg",
-      isActive: true,
     },
     {
       id: 2,
@@ -25,7 +23,6 @@ export default function About() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       listItems: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
       photoURL: "./public/photo1.jpg",
-      isActive: false,
     },
     {
       id: 3,
@@ -36,7 +33,6 @@ export default function About() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       listItems: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
       photoURL: "./public/photo1.jpg",
-      isActive: false,
     },
     {
       id: 4,
@@ -47,41 +43,31 @@ export default function About() {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       listItems: ["Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"],
       photoURL: "./public/photo1.jpg",
-      isActive: false,
     },
   ]);
 
-  //   const leftSlide = (users) => {
-  //     const index = users.findIndex((item) => item.isActive === true);
-  //     if (index === 0) {
-  //       setUsers(
-  //         users.map((item, ind) => {
-  //           if (ind === 0) {
-  //             item.isActive = false;
-  //           }
-  //           if (ind === users.length - 1) {
-  //             item.isActive = true;
-  //           }
-  //         })
-  //       );
-  //     }
-  //     setUsers(
-  //       users.map((item, ind) => {
-  //         if (ind === index - 1) {
-  //           item.isActive = true;
-  //         }
-  //         if (ind === index) {
-  //           item.isActive = false;
-  //         }
-  //       })
-  //     );
-  //   };
+  const [activeSlide, setActiveSlide] = useState(1);
+  const leftSlide = () => {
+    if (activeSlide === 1) {
+      return;
+    }
+    console.log(activeSlide);
+    setActiveSlide(activeSlide - 1);
+  };
+
+  const rightSlide = () => {
+    if (activeSlide === users.length) {
+      return;
+    }
+
+    setActiveSlide(activeSlide + 1);
+  };
 
   return (
     <div className="About">
-      <FaArrowLeft className="icon left" />
+      <FaArrowLeft onClick={leftSlide} className="icon left" />
       {users.map((item) => {
-        if (item.isActive === true) {
+        if (item.id === activeSlide) {
           return (
             <div key={item.id} className="user_container">
               <h2>About {item.name}</h2>
@@ -104,7 +90,7 @@ export default function About() {
           );
         }
       })}
-      <FaArrowRight className="icon right" />
+      <FaArrowRight onClick={rightSlide} className="icon right" />
     </div>
   );
 }
