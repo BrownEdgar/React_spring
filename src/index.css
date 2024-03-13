@@ -11,7 +11,21 @@ body {
   margin: 0 auto;
   line-height: 1.5;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(31, 30, 30);
+  background-image: linear-gradient(
+    to right top,
+    #735184,
+    #704680,
+    #6d3b7b,
+    #6b2e75,
+    #69206f,
+    #722477,
+    #7c2780,
+    #862b88,
+    #9e44a3,
+    #b75cbe,
+    #d074da,
+    #ea8df7
+  );
 }
 
 ul {
