@@ -7,14 +7,12 @@
 }
 
 body {
-  background-color: rgb(207, 217, 244);
+  background-color: rgb(210, 253, 255);
   max-width: 1140px;
   margin: 0 auto;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
 }
-
-
 
 a {
   text-decoration: none;
