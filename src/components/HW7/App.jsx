@@ -7,12 +7,11 @@ export default function App() {
 
   useEffect(() => {
     axios("https://type.fit/api/quotes").then((res) => {
-      setData(
-        res.map((elem) => {
-          elem.author = elem.author.split(", type.fit").join("");
-          return elem;
-        })
-      );
+      setData(res.data.map((elem) => {
+        elem.author = elem.author.split(", type.fit").join("");
+        return elem;
+      }))
+      console.log(data);
     });
   }, []);
 
