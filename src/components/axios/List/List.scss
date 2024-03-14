@@ -1,0 +1,69 @@
+@mixin mainFlex($jc, $ai, $gap) {
+    display: flex;
+    gap: $gap;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+$block-shadow: pink 3px 3px, rgb(255, 165, 180) 6px 6px, pink 9px 9px, rgba(240, 46, 170, 0.1) 12px 12px;
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 129, 0.9585084033613446) 0%, rgba(233, 146, 189, 0.9977240896358543) 0%, rgba(232, 48, 130, 1) 37%, rgba(242, 23, 118, 1) 64%, rgba(191, 44, 144, 1) 100%, rgba(255, 1, 109, 1) 100%, rgba(255, 69, 2, 1) 100%, rgba(196, 148, 59, 1) 100%, rgba(118, 144, 137, 1) 100%, rgba(0, 212, 255, 1) 100%, rgba(146, 121, 114, 1) 100%);
+}
+
+.List {
+    @include mainFlex(space-around, center, 24px);
+    padding: 1em;
+    &__item {
+        position: relative;
+        padding: 1em;
+        background-color: #eee;
+        color: #000;
+        box-shadow: $block-shadow;
+        border-radius: 12px;
+        flex-basis: 32%;
+        flex-basis: stretch;
+        &:hover{
+            width: auto;
+        }
+        p,
+        h2 {
+            font-size: 16px;
+            font-style: oblique;
+            font-family: sans-serif;
+            border: 2px solid rgb(230, 100, 122);
+            border-radius: 15px;
+            padding: 5px;
+            margin-top: 30px;
+        }
+        p:hover{
+            scale: 1;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 129, 0.9585084033613446) 0%, rgba(233, 146, 189, 0.9977240896358543) 0%, rgba(232, 48, 130, 1) 37%, rgba(242, 23, 118, 1) 64%, rgba(191, 44, 144, 1) 100%, rgba(255, 1, 109, 1) 100%, rgba(255, 69, 2, 1) 100%, rgba(196, 148, 59, 1) 100%, rgba(118, 144, 137, 1) 100%, rgba(0, 212, 255, 1) 100%, rgba(146, 121, 114, 1) 100%);
+            color: #eee;
+            border: transparent;
+        }
+        
+        h2 {
+            font-size: 23px;
+            font-weight: 500;
+            text-align: right;
+            border: transparent;
+        }
+    }
+    &__copyBtn {
+        position: absolute;
+        border-radius: 15px;
+        border: 0;
+        background-color: rgb(235, 127, 145);
+        color: #fff;
+        padding: 6px 10px;
+        top: -1px;
+        right: -1px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}

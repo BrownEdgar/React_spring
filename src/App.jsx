@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
-import About from './components/Homework_3/About'
+import App from './components/axios/App'
 
 
-export default function App() {
+export default function Aaa() {
   return (
     <div>
-      <About />
+      <App />
     </div>
   )
 }
