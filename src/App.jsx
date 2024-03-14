@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
-import Cards from './components/ToDo/ToDo'
+import Citati from './components/Citati/Citati'
 
 
 export default function App() {
   return (
     <div>
-      <Cards/>
+      <Citati/>
     </div>
   )
 }
