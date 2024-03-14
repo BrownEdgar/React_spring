@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import Menu from './components/Homework-3/Menu'
+import About from './components/axios/About'
 
 
 
 export default function App() {
   return (
     <div>
-      <Menu />
+      <About />
     </div>
 
   )
