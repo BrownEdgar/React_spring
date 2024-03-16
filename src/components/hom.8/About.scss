@@ -1,0 +1,40 @@
+body{
+    background-color: #7CB9E8;
+    
+}
+h1{
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    font-style: italic;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+
+}
+.About__item{
+    display: flex;
+    margin: 30px 70px;
+  
+    img{
+        width: 40%;
+        margin: 0 30px 15px 0;
+        aspect-ratio: 2/1;
+        
+    }
+    h2{
+        color: white;
+        font-size: 30px;
+        border-bottom: 2px solid #fff;
+    }
+    p{
+        color: #fff;
+        font-size: 20px;
+        font-style: italic;
+        
+    }
+    &-content{
+        width: 50%;
+       
+    }
+   
+}
