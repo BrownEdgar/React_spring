@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(31, 31, 44);
+    color: white;
+}
+
+.Programming{
+    &__title{
+        margin-bottom: 15px;
+    line-height: 40px;
+    border-bottom: 4px solid orange;
+    width: 180px;
+    }
+    &__item{
+        display: flex;
+        gap: 22px;
+    }
+    &__images{
+        padding: 5px 0;
+    }
+    &__img{
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+    }
+    &__name{
+            font-size: 35px;
+    }
+    
+}
