@@ -1,0 +1,39 @@
+body{
+    background-color: #3c4042;
+}
+.imgBox{
+  background-color: #1d1a1d;
+  max-width: 800px;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 30px;
+h1{
+    margin: 0 10px;
+    
+    border-bottom: #fcba28 1px solid;
+    color: white;
+    width: 140px;
+    font-weight: 600;
+    font-size: 25px;
+    }
+&__item{
+    display: flex;
+    gap: 10px;
+    img{
+        width: 400px;
+        height: 100%;
+        margin: 10px;
+    }
+}
+&__text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0px;
+    p{
+        color: #BDBCBD;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}
+}
