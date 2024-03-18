@@ -1,0 +1,53 @@
+.Modal {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    border-radius: 12px;
+    padding: 1em;
+    text-align: center;
+    width: max(30%, 450px);
+    min-height: 150px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    & button {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 12px;
+      background-color: cyan;
+      border-radius: 8px;
+      border: 0;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        scale: 1.04;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+
+    & button {
+      padding: 8px 12px;
+      border-radius: 8px;
+      background-color: cyan;
+      border: 0;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        scale: 1.04;
+      }
+    }
+  }
+}
