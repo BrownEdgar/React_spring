@@ -29,7 +29,7 @@ export default function App() {
             {
                 state.map(elem => {
                     return (
-                        <div className='App__item'>
+                        <div className='App__item' key={elem.id}>
                             <img src={elem.image} alt={elem.title} />
                             <div className='App__info'>
                                 <h2>{elem.title}</h2>
