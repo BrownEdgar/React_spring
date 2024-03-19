@@ -10,8 +10,6 @@ function App() {
       .then((data) => setPosts(data));
      
     }
- 
-  
     getData()
   },[] )
 
