@@ -28,8 +28,24 @@ export default function App() {
         </ul>
       </div>
       </div>
-      <div className="Card_contact">
-        
+      <div className="Card__contact">
+      <ul>
+            <li>
+              <i className="bi bi-facebook"></i>
+            </li>
+            <li>
+              <i className="bi bi-twitter"></i>
+            </li>
+            <li>
+              <i className="bi bi-google"></i>
+            </li>
+            <li>
+              <i className="bi bi-instagram"></i>
+            </li>
+            <li>
+              <i className="bi bi-youtube"></i>
+            </li>
+          </ul>
       </div>
     </div>
   )
