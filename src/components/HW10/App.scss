@@ -1,0 +1,57 @@
+.Card{
+    display:flex;
+    flex-direction: column;
+    width: 400px;   
+    height: 550px;
+    margin: 60px auto;
+    border: 2px solid rgb(103, 103, 103);
+    border-radius: 15px;
+    position: relative;
+    background-color: #fff;
+    &__image{
+        position: relative;
+        width: 398px;
+        height: 300px;
+    }
+    img{
+        width: 398px;
+        height: 300px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    &__status{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #151428;
+        color: white;
+        display: block;
+        height: 45px;
+        width: 100%;
+        i{
+            
+            margin-right: 15px;
+            margin-left: 15px;
+            font-size: 26px;
+        }
+    }
+    &__info{
+        padding: 1em;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        gap: 15px;
+    }
+    &__list{
+        ul{
+            margin-left: 10px;
+        }
+        li{
+            i{
+                font-size: 19px;
+            }
+            margin-bottom: 10px;
+        }
+    }
+}
