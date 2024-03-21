@@ -1,0 +1,31 @@
+.Card{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width:390px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &__image{
+        line-height: 25px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            background-color: rgb(41, 41, 49);
+            text-align: left;
+            padding: 10px 20px;
+            color: whitesmoke;
+            font-size: 27px;
+        }
+    }
+    &__bio{ 
+        text-align: left;
+        padding: 20px 20px;
+        line-height: 35px;
+        p{
+            width: 350px;
+        }
+    }
+    transition: 0.5s;
+    &:hover{
+        scale: 1.1;
+    }
+}
