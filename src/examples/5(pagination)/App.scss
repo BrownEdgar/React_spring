@@ -1,0 +1,32 @@
+.App {
+  max-width: 1440px;
+  padding: 1em;
+  margin: 20px auto;
+  &__Quotes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    grid-auto-rows: 220px;
+    gap: 16px;
+    padding: 16px;
+    & > div {
+      padding: 1em;
+      border-radius: 12px;
+      background-color: #e1e1e0;
+      position: relative;
+      span {
+        position: absolute;
+        font-size: 8em;
+        font-weight: 900;
+        color: transparent;
+        -webkit-text-stroke: 2px #000;
+        right: 20px;
+        bottom: -20px;
+        font-family: "Courier New", Courier, monospace;
+        user-select: none;
+      }
+    }
+  }
+  &__title-sm {
+    font-size: 22px;
+  }
+}
