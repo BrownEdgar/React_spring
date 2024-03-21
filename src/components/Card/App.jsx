@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className='App'>
       <div className="App__card">
-        <img className="App__image" src="/images/img-card.jpg" alt="card-image" />
+        <img src="/images/img-card.jpg" alt="card-image" />
         <h3><i className="bi bi-earbuds"></i> Focusing</h3>
         <div className='App__content'>
         <h2>Paterson Johnson</h2>
