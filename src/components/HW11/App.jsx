@@ -32,7 +32,7 @@ export default function App() {
             <p className="App__author">{data.email}</p>
         </div>
         <Pagineton
-        total={35}
+        total={36}
         perPage={perPage}
         page={page}
         changePage={changePage}/>
