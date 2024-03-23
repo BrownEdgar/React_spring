@@ -25,4 +25,22 @@
     bottom: 10px;
     right: 10px;
   }
+  &__navigation{
+    display:flex;
+    justify-content:center;
+    gap: 6px;
+    align-items: center;
+    li{
+        cursor: pointer;
+        border-radius: 6px;
+        border: 1px solid gray;
+        &.active{
+            background-color: purple;
+        }
+        a{
+            padding: 1em;
+            font-size: 20px;
+        }
+    }
+  }
 }
