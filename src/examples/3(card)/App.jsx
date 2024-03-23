@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import CircleLoader from '../../components/Loaders/CircleLoader/CircleLoader';
 
 import './App.scss'
-import CircleLoader from '../../components/Loaders/CircleLoader/CircleLoader';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
