@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./components/HW_card/App"
+import App from "./components/examples/5(pagination)/App"
 
 import "./index.css";
 
