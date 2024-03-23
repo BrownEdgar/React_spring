@@ -1,61 +1,45 @@
-import React, {useState, useEffect} from 'react'
-import './App.css'
-import axios from "axios";
-import ToDoDel from './components/ToDoDel/ToDoDel';
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import './App.scss'
+import classNames from 'classnames'
+import Pagination from './components/Pagination/Pagination'
 
 export default function App() {
-  const [toDo, setToDo] = useState([])
-  const [welcomeWindowOpen, setWelcomeWindowOpen] = useState(true)
-  const [open, setOpen] = useState(false)
-  const [index, setIndex] = useState(null)
-
-  const delbyIndex = () =>{
-    setToDo(toDo.toSpliced(index, 1))
-    setIndex(null)
-  }
-
-  const toggleToDo = () => setOpen(!open)
-  const welcomeWindowClose = () => setWelcomeWindowOpen(!welcomeWindowOpen)
+  const [data, setData] = useState([])
+  const [page, setPage] = useState(1)
+  const [perPage, setPerPage] = useState(1)
 
   useEffect(() => {
-    axios("https://dummyjson.com/todos").then((res) => {
-      setToDo(res.data.todos);
-    });
-  }, []);
+    axios('https://jsonplaceholder.typicode.com/comments', 
+    {
+      params:{
+        limit:34
+      }
+    }).then(res => setData(res.data))
+  }, [])
+
+  const changePage = (n) => setPage(n)
+  const slice = data.slice((page * perPage) - perPage, (page * perPage))
 
   return(
     <div className="App">
-
-      {welcomeWindowOpen? (
-        <ToDoDel welcomeWindowClose={welcomeWindowClose}>
-          <h2>Enjoy!</h2>
-          <button onClick={welcomeWindowClose} className='welcome-btn'>X</button>
-        </ToDoDel>
-      ):null}
-      
-      {open? (
-        <ToDoDel toggleToDo={toggleToDo}>
-          <div className="todo-btn">
-            <button onClick={toggleToDo} className='todo-btn-close'>Close</button>
-            <button onClick={() => {delbyIndex() 
-              toggleToDo()}} className='to-do-btn-delete'>Delete</button>
-          </div>
-        </ToDoDel>
-      ) : null}
-
-      <div className="list">
-        {toDo.map((elem,index) => {
-          return (
-            <div key={elem.id} className='a'>
-              <h2>{elem.todo}</h2>
-              <button onClick={() => {toggleToDo()
-              setIndex(index)}}>X</button>
-            </div>
+      <div className="App__comments">
+        {
+          slice.map(elem => {
+              return (
+                <div key={elem.id}>
+                  <span className='App__span1'>{elem.id}</span>
+                  <p>{elem.body}</p>
+                </div>
+              )
+            }
           )
-        })}
+        }
       </div>
+      <Pagination total={34} perPage={perPage} page={page} changePage={changePage}/>
     </div>
   )
-
 }
+
+
+
