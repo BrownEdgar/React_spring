@@ -60,7 +60,7 @@ export default function App() {
   const [info, setInfo] = useState([]);
 
   const handlePageClick = ({ selected }) => {
-    setPage(selected);
+    setPage(selected+1);
   };
   useEffect(() => {
     setInfo(post.slice(page * perPage - perPage, perPage * page));
