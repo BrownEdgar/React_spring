@@ -21,6 +21,10 @@ export default function App() {
 
   const changePage = (n) => setPage(n)
 
+  
+
+
+
   return (
     <div className='App'>
       <div className="App__Quotes">
@@ -42,7 +46,7 @@ export default function App() {
         }
       </div>
       
-      <Pagineton total={25} perPage={perPage} page={page} changePage={changePage} />
+      <Pagineton total={35} perPage={perPage} page={page} changePage={changePage} />
     </div>
   )
 }

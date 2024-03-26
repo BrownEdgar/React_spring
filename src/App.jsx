@@ -24,7 +24,6 @@ export default function App() {
   const closeWelcome = () => setwelcomeOpen(!welcomeOpen)
   return (
     <div className='App'>
-
       {welcomeOpen? (
         <Modal closeWelcomel={closeWelcome}>
 
@@ -33,6 +32,7 @@ export default function App() {
           
         </Modal>
       ): null}
+
       
       {isOpen? (
         <Modal toggleModal={toggleModal} theme="light" >
