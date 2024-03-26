@@ -60,7 +60,7 @@ export default function App() {
   const [info, setInfo] = useState([]);
 
   const handlePageClick = ({ selected }) => {
-    setPage(selected+1);
+    setPage(selected + 1);
   };
   useEffect(() => {
     setInfo(post.slice(page * perPage - perPage, perPage * page));
@@ -68,6 +68,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <h1>Blog</h1>
       <div className="App__Posts">
         {info.map((elem) => {
           return (
