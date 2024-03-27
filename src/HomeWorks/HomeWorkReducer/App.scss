@@ -1,0 +1,10 @@
+.App {
+  &__actions {
+    display: flex;
+    gap: 12px;
+    & button {
+      padding: 0.5em 1em;
+      border-radius: 8px;
+    }
+  }
+}
