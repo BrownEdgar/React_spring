@@ -1,0 +1,11 @@
+const ACTIONS = {
+    ADD_NAME: 'ADD_NAME',
+    SHUFFLE: 'SHUFFLE',
+    ADD_NUMBER: 'ADD_NUMBER',
+    FILTER: 'FILTER',
+    CHANGE_NAME: 'CHANGE_NAME',
+    AGE: "AGE",
+    REMOVE: "REMOVE"
+}
+
+export default ACTIONS

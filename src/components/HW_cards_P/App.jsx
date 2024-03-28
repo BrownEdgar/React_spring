@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames'
-import axios from 'axios';
 import './App.scss'
 import ReactPaginate from 'react-paginate';
 
@@ -124,5 +123,6 @@ export default function App() {
             activeClassName='active'
             />
         </div>
+    
     )
 }

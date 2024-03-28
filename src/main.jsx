@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './components/HW_cards_P/App'
+import App from './components/HW_reducer/App'
 
 import "./index.css";
 
