@@ -1,0 +1,28 @@
+.App{
+    max-width:1440px;
+    button{
+        width: 100px;
+        height: 60px;
+        background-color: purple;
+        color: white;
+        border:1px solid white;
+        border-radius: 15px;
+        padding: 1em;
+    }
+    &__buttons{
+        display:flex;
+        justify-content:center;
+        gap: 15px;
+    }
+    input{
+        width: 700px;
+        height: 60px;
+        margin: 15px auto 15px;
+        display: block;
+        border-radius: 15px;
+    }
+    h2{
+        color: white;
+        text-align: center;
+    }
+}
