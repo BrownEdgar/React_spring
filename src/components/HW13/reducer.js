@@ -32,34 +32,30 @@ export default (state = initialState, { type, payload }) => {
 
 function AddDev(state, payload) {
   state.developers = [...state.developers, payload.input];
-  return {...state};
+  return { ...state };
 }
 
 function shuffleArray(state) {
-  state.arr = state.arr.toSorted(() => Math.random() - 0.5)
-  return {...state };
+  state.arr = state.arr.toSorted(() => Math.random() - 0.5);
+  return { ...state };
 }
 
 function addNum(state) {
   const random = Math.round(Math.random() * (999 - 100) + 100);
   state.arr = [...state.arr, random];
-  return {...state};
+  return { ...state };
 }
 
 function delnumbers(state) {
-  state.arr = state.arr.filter((num) => num > 10);
-  return {...state};
+  return { ...state ,arr:state.arr.filter((num) => num > 10)};
 }
 function rename(state) {
-  state.user.name = "bgdo";
-  return {...state};
+  return { ...state ,user: {...user,name: "bgdo"}};
 }
 
 function addAge(state) {
-  state.user.age = 18;
-  return {...state};
+  return { ...state ,user: {...user,age: 18}};
 }
 function delByIndex(state, payload) {
-  state.arr = state.arr.toSpliced(payload, 1);
-  return {...state};
+  return { ...state , arr:state.arr.toSpliced(payload, 1)};
 }
