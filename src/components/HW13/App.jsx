@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import reducer, { initialState } from "./reducer";
 import { ACTIONS } from "./actionTypes";
 import './App.scss'
@@ -6,7 +6,7 @@ import './App.scss'
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [input, setInput] = useState("");
-
+  
   return (
     <div className="App">
       <h2>{JSON.stringify(state, null, 2)}</h2>
