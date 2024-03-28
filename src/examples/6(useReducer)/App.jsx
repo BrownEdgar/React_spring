@@ -4,8 +4,6 @@ import reducer, { initialState } from './reducer';
 import ACTIONS from './actionsTypes';
 import axios from 'axios';
 
-
-
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 

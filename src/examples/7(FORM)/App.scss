@@ -1,0 +1,60 @@
+.App {
+  padding-left: 16px;
+  padding-right: 16px;
+  &__form {
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    gap: 12px;
+    padding: 1em;
+    input {
+      padding: 0.6rem 1rem;
+      font-size: 20px;
+      border: 0;
+      border-radius: 4px;
+      &:focus {
+        outline: none;
+      }
+      &[type="submit"] {
+        background-color: #05c46b;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        font-variant: small-caps;
+      }
+    }
+  }
+}
+
+table {
+  background-color: #323232;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th,
+td,
+caption {
+  padding: 1rem;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+caption {
+  background: hsl(0 0% 0%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+th {
+  background: hsl(0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0 0% 0% / 0.1);
+}
