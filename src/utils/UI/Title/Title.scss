@@ -1,0 +1,27 @@
+.Title{
+    letter-spacing: 2px;
+    padding: 1em;
+    border-radius: 12px;
+    margin: 20px 0;
+    &-dark{
+        background-color: #1e272e;
+        color: whitesmoke;
+    }
+    &-success{
+        background-color: #05c46b;
+        color: #fff;
+    }
+    &-warning{
+        background-color: #ff0404;
+        color: #1e272e;
+    }
+    &-left{
+        text-align: left;
+    }
+    &-cnter{
+        text-align: center;
+    }
+    &-right{
+        text-align: right;
+    }
+}
