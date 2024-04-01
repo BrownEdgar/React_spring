@@ -1,30 +1,25 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import reducer, { initialState } from "./reducer";
 import ACTIONS from "./actionTypes";
 import "./App.scss";
 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [value, setValue] = useState("");
 
   return (
     <div className="App">
-      <h1>{JSON.stringify(initialState, null, 1)}</h1>
+      <h1>{JSON.stringify(state, null, 1)}</h1>
       <div className="App__actions">
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            dispatch({ type: ACTIONS.ADD_DEVELOPER, payload: e });
           }}
-        />
-        <button
-          onClick={() =>
-            dispatch({ type: ACTIONS.ADD_DEVELOPER, payload: value })
-          }
         >
-          Add Developer
-        </button>
+          <input type="text" name="username" />
+          <input type="submit" value="Add developer" />
+        </form>
+
         <button onClick={() => dispatch({ type: ACTIONS.SHUFFLE })}>
           Shuffle
         </button>

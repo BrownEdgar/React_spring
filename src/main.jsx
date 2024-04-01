@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./HomeWorks/HomeWorkReducer/App";
+import App from "./HomeWorks/HomeWorkPostForm/App";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

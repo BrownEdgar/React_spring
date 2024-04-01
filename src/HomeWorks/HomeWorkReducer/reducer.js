@@ -32,9 +32,11 @@ function reducer(state = initialState, action) {
 
 export default reducer;
 
-const addDeveloper = (state, value) => {
-  state.developers = state.developers.toSpliced(0, 0, value);
-  return state;
+const addDeveloper = (state, e) => {
+  return {
+    ...state,
+    developers: [...state.developers, e.target.username.value],
+  };
 };
 
 const shuffle = (state) => {
@@ -42,35 +44,30 @@ const shuffle = (state) => {
     const j = Math.floor(Math.random() * (i + 1));
     [state.arr[i], state.arr[j]] = [state.arr[j], state.arr[i]];
   }
-  return state;
+  return { ...state, arr: [...state.arr] };
 };
 
 const filterArr = (state) => {
   state.arr = state.arr.filter((item) => item > 10);
-  return state;
+  return { ...state, arr: [...state.arr] };
 };
 
 const addNumber = (state) => {
-  state.arr = state.arr.toSpliced(
-    -1,
-    0,
-    Math.ceil(Math.random() * (999 - 100) + 100)
-  );
-  return state;
+  return {
+    ...state,
+    arr: [...state.arr, Math.ceil(Math.random() * (999 - 100) + 100)],
+  };
 };
 
 const deleteNumber = (state, ind) => {
   state.arr = state.arr.toSpliced(ind, 1);
-  return state;
+  return { ...state, arr: [...state.arr] };
 };
 
 const addAge = (state, num) => {
-  state.user.age = num;
-
-  return state;
+  return { ...state, user: { ...state.user, age: num } };
 };
 
 const changeName = (state, newName) => {
-  state.user.name = newName;
-  return state;
+  return { ...state, user: { ...state.user, name: newName } };
 };
