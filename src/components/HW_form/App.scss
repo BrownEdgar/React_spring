@@ -1,0 +1,89 @@
+.App{
+    display: flex;
+    color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    &__form{
+        width: 600px;
+        height: 600px;
+        border: 3px solid rgb(105, 192, 211);
+        border-radius: 16px;
+        margin: 100px 10px;
+        padding: 1.5em;
+        display: grid;
+        place-items: center;
+        textarea{
+            width: 100%;
+            padding: 0.6em 4rem;
+            margin: 15px;
+            font-size: 20px;
+            border: 0;
+            border-radius: 4px;
+            height: 250px;
+        }
+        input{
+            width: 100%;
+            padding: 0.6em 4rem;
+            margin: 15px;
+            font-size: 20px;
+            border: 0;
+            border-radius: 4px;
+            &[type = title]{
+                height: 70px;
+            }
+            &:focus{
+                outline: 2px solid royalblue;
+                outline-offset: 2px;
+            }
+            &[type = 'submit']{
+                background-color: rgb(154, 154, 154);
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                font-variant: small-caps;
+            }
+        }
+        
+    }
+    &__table{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 20px;
+        justify-content:space-evenly;
+        border: 3px solid  rgb(105, 192, 211);
+        border-radius: 16px;
+        width: 80%;
+        overflow: auto;
+        height: 750px;
+    }
+    &__info{   
+        background-color: rgb(27, 132, 167);
+        border: 2px solid rgb(47, 175, 218);
+        border-radius: 16px;
+        margin: 10px;
+        padding: 5px;
+        height: 250px;
+        width: 400px;
+        overflow: auto;
+        position: relative;
+        &__delete{
+            position: absolute;
+            top: 0;
+            right: 0;
+            button{
+                background-color: rgb(154, 154, 154);
+                color: white;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+        flex-wrap: wrap;
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}
