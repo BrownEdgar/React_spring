@@ -1,22 +1,11 @@
 {
   "users": [
     {
-      "id": "ygXzlM",
-      "username": "Bgdo",
-      "email": "bgdo@gmail.com",
-      "gender": "male"
-    },
-    {
-      "id": "Zbbz6N",
-      "username": "jhon",
-      "email": "john@gmail.com",
-      "gender": "male"
-    },
-    {
-      "id": "Zbbz6N",
-      "username": "Varsik",
-      "email": "john@gmail.com",
-      "gender": "male"
+      "id": "RZeGck",
+      "email": "dsadsa!@dsa",
+      "username": "dsad",
+      "gender": "male",
+      "language": "css"
     }
   ]
 }

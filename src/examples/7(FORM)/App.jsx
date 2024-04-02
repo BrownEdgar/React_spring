@@ -5,26 +5,29 @@ import Title from '../../utils/UI/Title/Title'
 import { useState } from 'react';
 import classNames from 'classnames';
 import axios from 'axios';
+import MainForm from '../../components/Form/MainForm';
 
 export default function App() {
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState({})
   const [dublicateEmailId, setDublicateEmailId] = useState(null)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { username, email, gender } = e.target;
-    const isUserExistUser = users.find(elem => elem.email === email.value.toLowerCase())
+  const setEditableuser = (user) => {
+    setCurrentUser(user)
+  }
+
+  const handleSubmit = (values, { resetForm }) => {
+    const isUserExistUser = users.find(elem => elem.email === values.email.toLowerCase())
     if (isUserExistUser) {
       setDublicateEmailId(isUserExistUser.id)
       setTimeout(setDublicateEmailId, 3010, null)
       return;
     }
     setDublicateEmailId(null)
+
     const user = {
       id: nanoid(6),
-      username: username.value,
-      email: email.value.toLowerCase(),
-      gender: gender.value
+      ...values
     }
     axios.post(import.meta.env.VITE_DB_URL, user)
     setUsers((prevUsers) => {
@@ -32,22 +35,26 @@ export default function App() {
       // localStorage.setItem('users', JSON.stringify(newData));
       return newData;
     });
-    e.target.reset();
+    resetForm();
   }
-
+  function getUsers() {
+    axios(import.meta.env.VITE_DB_URL)
+      .then(res => setUsers(res.data))
+  }
   useEffect(() => {
     // const users = JSON.parse(localStorage.getItem('users') || "[]")
     // setUsers(users)
-    axios(import.meta.env.VITE_DB_URL)
-      .then(res => setUsers(res.data))
+    getUsers()
   }, [])
 
   const handleDelete = (id) => {
-    setUsers((prevUsers) => {
-      const newData = prevUsers.filter(user => user.id !== id)
-      localStorage.setItem('users', JSON.stringify(newData));
-      return newData
+    axios({
+      baseURL: import.meta.env.VITE_DB_URL,
+      method: 'DELETE',
+      url: id
     })
+      .then(getUsers)
+      .catch(err => console.log(err))
   }
 
   const hendleSort = () => {
@@ -56,20 +63,8 @@ export default function App() {
 
   return (
     <div className='App'>
-      <Title title='React form exampe' as='h1' align='right' />
-      <form onSubmit={handleSubmit} className='App__form'>
-        <input type="email" name='email' required placeholder='email' />
-        <input type="text" name='username' required placeholder='username' />
-        <div>
-          <label htmlFor="male">
-            <input type="radio" name="gender" id="male" value="male" /> M
-          </label>
-          <label htmlFor="female">
-            <input type="radio" name="gender" id="female" value="female" /> F
-          </label>
-        </div>
-        <input type="submit" value="save user" />
-      </form>
+      <Title title='React form exampe' as='h1' align='left' />
+      <MainForm onSubmit={handleSubmit} currentUser={currentUser} />
       <hr />
       <table>
         <caption>Our users</caption>
@@ -81,8 +76,9 @@ export default function App() {
               email
               <i className="bi bi-sort-down-alt" onClick={hendleSort}></i>
             </th>
+            <th>language</th>
             <th>gender</th>
-            <th></th>
+            <th colSpan={2}></th>
           </tr>
         </thead>
         <tbody>
@@ -95,7 +91,13 @@ export default function App() {
                   <td>{elem.id}</td>
                   <td>{elem.username}</td>
                   <td>{elem.email}</td>
+                  <td>{elem.language}</td>
                   <td>{elem.gender[0].toUpperCase()}</td>
+                  <td className='delete'>
+                    <button onClick={() => setEditableuser(elem)}>
+                      <i className="bi bi-pencil"></i>
+                    </button>
+                  </td>
                   <td className='delete'>
                     <button onClick={() => handleDelete(elem.id)}>
                       <i className="bi bi-x-lg"></i>
