@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    gap: 12px;
     background: linear-gradient(
       25deg,
       rgba(186, 85, 211, 1) 0%,
@@ -21,6 +20,7 @@
     );
     input,
     textarea {
+      margin-top: 12px;
       width: 70%;
       height: 30px;
       border: 0;
@@ -30,20 +30,24 @@
         outline: 0;
         border: 0;
       }
-     
-      &[type="submit"]:hover {
-        background-color: purple;
-        color: white;
-        border: 0;
+      &[type="submit"]{
+        margin-bottom: 15px;
+        &:hover {
+          background-color: purple;
+          color: white;
+          border: 0;
+        }
       }
     }
     textarea {
-        padding-top: 4px;
-        height: 120px;
+      padding-top: 4px;
+      height: 120px;
     }
+   
     h2 {
       text-align: center;
       color: #fff;
+      
     }
   }
   &__posts {
@@ -53,7 +57,7 @@
     border-radius: 16px;
     margin-left: 60px;
     margin-top: 30px;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 14px;
     background: linear-gradient(
@@ -64,23 +68,39 @@
       rgba(223, 115, 255, 1) 100%
     );
   }
-  &__post{
+  &__post {
     border: 1px solid white;
     border-radius: 16px;
     padding: 1em;
     color: white;
-    width: 32%; 
-    height: 45%; 
+    width: 32%;
+    height: 45%;
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    span{
-        position: absolute;
-        bottom: 0;
-        right: 10px;
-        font-size: 3em;
-        font-weight: 800;
-        user-select: none;
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      font-size: 3em;
+      font-weight: 800;
+      user-select: none;
     }
+    &:hover{
+      color: purple;
+      background-color: #fff;
+      scale: 1.05;
+    }
+  }
+  &__error{
+    color: rgb(138, 34, 34);
+    font-weight: 700;
+    font-size: 12px;
+    
+  }
+  &__errorMasages{
+    padding: 4px;
+    width: 70%;
+    height: 50px;
   }
 }
