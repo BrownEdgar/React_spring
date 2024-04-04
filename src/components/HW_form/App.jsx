@@ -2,23 +2,25 @@ import React, { useState, useEffect} from 'react'
 import './App.scss'
 import axios from 'axios'
 import {nanoid} from 'nanoid'
+import Form_hw from '../Form2/Form_hw'
 
 export default function App() {
     const [users, setUsers] = useState([])
 
-    useEffect(() => {
+    function getUsers() {
         axios('http://localhost:3000/users')
         .then(res => setUsers(res.data))
+    }
+
+    useEffect(() => {
+        getUsers()
     }, [])
     
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const {title, body} = e.target
-
+    const handleSubmit = (values, {resetForm}) => {
+        resetForm()
         const user = {
             id: nanoid(6),
-            title: title.value,
-            body: body.value,
+            ...values
         }
 
         axios.post('http://localhost:3000/users', user)
@@ -26,24 +28,20 @@ export default function App() {
             const newData = [...prevUsers, user ]
             return newData
         })
-        e.target.reset()
     }
 
     const handleDelete  = (id) => {
-        setUsers((prevUsers) => {
-            const newData = prevUsers.filter(user => user.id != id)
-            return newData
-        })
+        axios({
+            baseURL: 'http://localhost:3000/users',
+            method: 'DELETE',
+            url: id
+        }).then(getUsers)
+            .catch(err => console.log(err))
     }
 
     return (
         <div className='App'>
-
-            <form onSubmit={handleSubmit} className='App__form'>
-                <input type="title" name ='title'  required/>
-                <textarea name="body" id="" cols="30" rows="10" ></textarea>
-                <input type="submit" value = 'ADD'/>
-            </form>
+            <Form_hw onSubmit={handleSubmit} />
             <div className="App__table">
                     {
                         users.map(elem => {
