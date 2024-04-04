@@ -1,72 +1,69 @@
 import React, { useEffect, useState } from 'react'
 import './Form.scss'
 import axios from 'axios'
-import { nanoid } from 'nanoid'
+import {nanoid} from 'nanoid'
+import Form2 from '../Form2/Form2'
 
 export default function Form() {
-  const [post, setPost] = useState([])
-
+  const [posts, setPosts] = useState([])
+    // ----------------
+  function getPosts() {
+    axios('http://localhost:3000/posts').then(res => setPosts(res.data))
+  }
+    // ----------------
   useEffect(() => {
-    axios('http://localhost:3000/posts')
-    .then(res => setPost(res.data))
-  }, [])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const {title,body} = e.target
-
+    getPosts()
+  },[])
+    // ----------------
+  const handleSubmit = (values, {resetForm}) => {
+    resetForm()
     const post = {
-      id: nanoid(5),
-      title: title.value,
-      body: body.value
+        id: nanoid(5),
+        ...values
     }
-
-    axios.post('http://localhost:3000/posts', post)
-    setPost((prevPosts)=>{
+    // ---------------
+  axios.post('http://localhost:3000/posts', post)
+    setPosts((prevPosts)=>{
       const newPosts = [...prevPosts,post] 
       return newPosts
-    })
+  })
     e.target.reset()
   }
-  
+    // ---------------
   const handleDelete = (id) => {
-    setPost((prevPosts) => {
-      const newData = prevPosts.filter(user => user.id != id)
-      return newData
-    }
-  )}
-  return (
-    <div className='Form'>
-      <form onSubmit={handleSubmit} className='Form__form'>
-        <input type="title" name='title' required className='Form__title' placeholder='Add Title'/>
-        <textarea name="body" cols="30" rows="10" required placeholder='Add Body'></textarea>
-        <input type="submit" value='Add' className='Form__add'/>
-      </form>
-    <div className="Form__body">
-      {
-        post.map(elem=>{
-          return (
-            <div className="Form__info">
-              <div key={elem.id}>
-                <div className="Form__bio">
-                  <h2>{elem.title}</h2>
-                <p>{elem.body}</p>
-                </div>
-                <span className='Form__delete'>
-                  <button onClick={() => handleDelete(elem.id)}>
-                    <i class="bi bi-trash3-fill"></i>
-                  </button>
-                </span>
-              </div>
-            </div>
-          )
-        })
-      }
-    </div>
-  </div>
-)
+    axios({
+        baseURL: 'http://localhost:3000/posts',
+        method: 'DELETE',
+        url: id
+    }).then(getPosts)
   }
-
-  
-
-
+  return (
+    <div className="Form">
+        <Form2 onSubmit={handleSubmit}/>
+        <div className="Form__bio">
+            {
+                posts.map(elem => {
+                    return(
+                        <div className="Form__info">
+                            <div key={elem.id} className='Form__items'>
+                              <div className="Form__content">
+                                <h2>Name: {elem.title}</h2>
+                                <i>Post: {elem.body}</i>
+                              </div>
+                                <div className="Form__delete">
+                                  <span className='Form__info__delete'>
+                                    <button onClick={() => handleDelete(elem.id)}>
+                                        <i className="bi bi-trash3-fill"></i>
+                                    </button>
+                                  </span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    </div>
+  )
+}

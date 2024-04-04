@@ -1,48 +1,32 @@
 .Form{
     display: flex;
-    margin: 50px 0;
     align-items: center;
-    justify-content: space-evenly;
-    &__form{
-        width: 450px;
-        height: 450px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-        border-radius: 15px;
-        display: grid;
-        place-items: center;
-        textarea{
-            width: 80%;
-            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-            border: none;
-            border-radius: 15px;
-            padding: 15px;
-        }
-    }
-    &__title{
-        width: 80%;
-        line-height: 25px;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-        border: none;
-        border-radius: 15px;
-        padding: 15px;
-    }
-    &__add{
-        width: 60%;
-        height: 40%;
-        border: none;
-        border-radius: 15px;
-        font-size: 18px;
-        font-weight: 700;
-        transition: .2s;
-        &:hover{
-            background-color: rgb(198, 198, 198);
-
-        }
-    }
-    &__info > div{
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 16px;
+    &__bio{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__info{
         padding: 15px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-        margin: 15px;
+        width: 350px;
+    }
+    &__items{
+        display: flex;
+        gap: 45px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        padding: 25px;
+        border-radius: 15px;
+    }
+    &__delete button{
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 22px;
+        &:hover{
+            color: rgb(201, 9, 9);
+        }
     }
 }

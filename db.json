@@ -1,39 +1,24 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "hello",
-      "body": "alooo hhhh  "
+      "id": "0s2q3",
+      "title": "asd",
+      "body": "asda"
     },
     {
-      "id": "JiLW3",
-      "title": "vdfbdf",
-      "body": ""
+      "id": "d2zHl",
+      "title": "asdasd",
+      "body": "ads"
     },
     {
-      "id": "wVlwI",
-      "title": "dfgdf",
-      "body": ""
+      "id": "xVSyT",
+      "title": "fsdfsdf",
+      "body": "dsfsdf"
     },
     {
-      "id": "rVG4f",
-      "title": "dfgdfg",
-      "body": "fdgdfg"
-    },
-    {
-      "id": "Ipm9M",
-      "title": "dsfds",
+      "id": "ZtLe_",
+      "title": "dsfsdf",
       "body": "fsdf"
-    },
-    {
-      "id": "ycirn",
-      "title": "fsdf",
-      "body": "fsd"
-    },
-    {
-      "id": "doshk",
-      "title": "fsdf",
-      "body": "sdfsd"
     }
   ]
 }
