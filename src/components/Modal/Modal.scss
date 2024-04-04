@@ -6,6 +6,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  z-index: 99999;
   align-items: center;
   &__content {
     border-radius: 12px;

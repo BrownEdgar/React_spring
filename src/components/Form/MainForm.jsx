@@ -8,30 +8,30 @@ const initialValues = {
   email: '',
   username: '',
   gender: '',
-  language: ''
+  language: 'html'
 }
 
 const validationSchema = object({
   email: string().email().lowercase().trim().required(),
   username: string().min(3, "to short").max(18).required(),
   gender: string().oneOf(["male", 'female']).required(),
-  language: string().required()
+  language: string().default('html')
 })
 
 export default function MainForm({ onSubmit, currentUser }) {
-  console.log(currentUser)
+
   return (
     <div className='MainForm'>
       <Formik
         validationSchema={validationSchema}
         onSubmit={onSubmit}
-        initialValues={Object.keys(currentUser).length > 0 ? currentUser : initialValues}
+        initialValues={initialValues}
       >
         {
           (formik) => {
-            console.log(formik)
+
             return (
-              <Form className='App__form' initialValues={currentUser?.id ? currentUser : initialValues}>
+              <Form className='App__form' >
                 <ErrorMessage>
                   {(err) => {
                     return (
@@ -51,7 +51,7 @@ export default function MainForm({ onSubmit, currentUser }) {
                 </div>
                 <div>
                   <Field as="select" name='language'>
-                    <option value="html">html</option>
+                    <option value="html" >html</option>
                     <option value="css">css</option>
                     <option value="javascript">javascript</option>
                     <option value="react">react</option>
@@ -73,6 +73,6 @@ export default function MainForm({ onSubmit, currentUser }) {
         }
       </Formik>
 
-    </div >
+    </div>
   )
 }

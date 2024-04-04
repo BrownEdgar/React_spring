@@ -6,13 +6,14 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import axios from 'axios';
 import MainForm from '../../components/Form/MainForm';
+import Modal from '../../components/Modal/Modal';
 
 export default function App() {
   const [users, setUsers] = useState([]);
-  const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState(null)
   const [dublicateEmailId, setDublicateEmailId] = useState(null)
 
-  const setEditableuser = (user) => {
+  const setEditableuser = (user = null) => {
     setCurrentUser(user)
   }
 
@@ -60,9 +61,46 @@ export default function App() {
   const hendleSort = () => {
     setUsers(users.toSorted((a, b) => (b.email).localeCompare(a.email)))
   }
+  const handleEditSubmit = (e) => {
+    e.preventDefault()
+    axios.put(import.meta.env.VITE_DB_URL + `/${currentUser.id}`, currentUser)
+      .then(res => {
 
+        setCurrentUser(null)
+        getUsers()
+      })
+      .catch(err => console.log(err))
+  }
+  const handleChange = (e) => {
+    setCurrentUser({
+      ...currentUser,
+      [e.currentTarget.name]: e.currentTarget.value
+    })
+
+  }
   return (
     <div className='App'>
+      {currentUser ? (
+        <Modal toggleModal={setEditableuser}>
+          <form onSubmit={handleEditSubmit} className="App__editForm">
+            <input
+              type="text"
+              name='username'
+              value={currentUser.username}
+              onChange={handleChange} />
+            <input type="email" name='email' value={currentUser.email} onChange={handleChange} />
+            <select name="language" id="language" defaultValue={currentUser.language} onChange={handleChange}>
+              <option value="html">html</option>
+              <option value="css">css</option>
+              <option value="javascript">javascript</option>
+              <option value="react">react</option>
+            </select>
+            <input type="radio" name="gender" id="male" value="male" checked={currentUser.gender === 'male'} onChange={handleChange} /> M
+            <input type="radio" name="gender" id="female" value="female" checked={currentUser.gender === 'female'} onChange={handleChange} /> F
+            <input type="submit" value="save" />
+          </form>
+        </Modal>
+      ) : null}
       <Title title='React form exampe' as='h1' align='left' />
       <MainForm onSubmit={handleSubmit} currentUser={currentUser} />
       <hr />
@@ -88,6 +126,7 @@ export default function App() {
                 <tr key={elem.id} className={classNames({
                   'dublicate': dublicateEmailId == elem.id
                 })}>
+
                   <td>{elem.id}</td>
                   <td>{elem.username}</td>
                   <td>{elem.email}</td>
