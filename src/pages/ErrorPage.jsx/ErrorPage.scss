@@ -1,0 +1,18 @@
+.error{
+    text-align: center;
+    margin: 20% 0 0 0;
+    font-size: 100px;
+    font-weight: 700;
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+    border-radius: 50px;
+    .for{
+        color: orangered;
+        font-weight: 900;
+        transition: .2s;
+        &:hover{
+            color: red;
+            user-select: none;
+        }
+    }
+}
