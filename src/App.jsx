@@ -1,53 +1,24 @@
 import React from 'react'
+import {Routes, Route} from 'react-router-dom'
+import Home from './components/Home/Home'
+import Navbar from './components/Navbar/Navbar'
+import Products from './components/Products/Products'
+import About from './components/About/About'
+import News from './components/News/News'
+import Contact from './components/Contact/Contact'
 import './App.css'
-import Module from './components/Module/Module'
-import { useState,useEffect } from 'react'
 export default function App() {
-  const [cities, setcities] = useState(['Tokio','Amsterdam','Yerevan','London',"Berlin"])
-  const [currentIndex, setCurrentIndex] = useState(null)
-  const [isOpen, setisOpen] = useState(false)
- 
-  function toggleModal() {
-    
-    setisOpen(!isOpen)
-  }
-  const deleteCityByIndex = () => {
-    setcities(cities.toSpliced(currentIndex, 1))
-    setCurrentIndex(null);
-  }
   return (
     <div className='App'>
-       {isOpen ? (
-        <Module toggleModal={toggleModal} theme="dark">
-
-          <h1>Are you Sure?</h1>
-          <div className="Modal__buttons">
-            <button onClick={toggleModal}>cancel</button>
-            <button onClick={() => {
-              deleteCityByIndex()
-              toggleModal()
-            }}>delete</button>
-          </div>
-
-        </Module>
-      ) : null}
-
-      <div className='App__List'>
-        {
-          cities.map((elem,index) => {
-            return(
-              <div key={elem}>
-                <h2>{elem}</h2>
-                <button onClick={()=>{
-                  toggleModal()
-                  setCurrentIndex(index)
-                  
-                }}>Delete</button>
-              </div>
-            )
-          })
-        }
-      </div>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/news' element={<News/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        
+      </Routes>
         </div>
   )
 }
