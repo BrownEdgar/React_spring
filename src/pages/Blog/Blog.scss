@@ -1,0 +1,25 @@
+@import "../../sass/mixins";
+.Blog {
+  &__wrapper {
+    @include flexCenter(auto, transparent, row);
+    padding: 20px;
+    flex-wrap: wrap;
+    & > a {
+      position: relative;
+      overflow: hidden;
+      flex-basis: 30%;
+      background-color: #eee;
+      color: #222;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__info {
+    padding: 1em;
+    h2 {
+      font-weight: 400;
+    }
+  }
+}

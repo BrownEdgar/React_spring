@@ -1,0 +1,29 @@
+.SingleBlog {
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: 1fr 500px;
+  margin: 20px auto;
+  gap: 20px;
+
+  &__Element {
+    & > h1 {
+      margin-bottom: 20px;
+      font-size: 60px;
+      line-height: 1;
+    }
+    img {
+      width: 100%;
+      display: inline-block;
+      object-fit: contain;
+    }
+  }
+  &__desc {
+    margin-right: 20px;
+    padding: 1em;
+    p {
+      line-height: 1.5;
+      font-size: 18px;
+      margin: 16px auto;
+    }
+  }
+}
