@@ -1,50 +1,28 @@
-import React, { useState } from 'react'
-import Modal from './components/Modal/Modal';
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Home from './pages/home/Home'
+import About from './pages/About/About'
+import Blog from './pages/Blog/Blog'
+import Contact from './pages/Contact/Contact'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import ROUTES from './routes'
 import './App.css'
+import ErrorPage from './pages/ErrorPage/ErrorPage'
 
 export default function App() {
-  const [cities, setCities] = useState(['Tokio', "Amsterdam", "Yerevan", "London", "Berlin"]);
-  const [curerntIndex, setCurerntIndex] = useState(null)
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleModal = () => setIsOpen(!isOpen);
-  const deletCityByIndex = () => {
-    setCities(cities.toSpliced(curerntIndex, 1));
-    setCurerntIndex(null)
-  }
-
   return (
     <div className='App'>
-      {isOpen ? (
-        <Modal toggleModal={toggleModal} theme="dark">
-
-          <h1>Are you Sure?</h1>
-          <div className="Modal__buttons">
-            <button onClick={toggleModal}>cancel</button>
-            <button onClick={() => {
-              deletCityByIndex()
-              toggleModal()
-            }}>delete</button>
-          </div>
-
-        </Modal>
-      ) : null}
-
-      <div className="App__list">
-        {
-          cities.map((elem, index) => {
-            return (
-              <div key={elem}>
-                <h2>{elem}</h2>
-                <button onClick={() => {
-                  toggleModal()
-                  setCurerntIndex(index)
-                }}>Delete</button>
-              </div>
-            )
-          })
-        }
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.BLOG} element={<Blog />} />
+        <Route path={ROUTES.CONTACT} element={<Contact />} />
+        <Route path='*' element={<Navigate to={ROUTES.HOME} />} />
+      </Routes>
+      <footer>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit exercitationem ullam molestias? Laboriosam, possimus eligendi officiis illum aut voluptas a.</p>
+      </footer>
     </div>
   )
 }
