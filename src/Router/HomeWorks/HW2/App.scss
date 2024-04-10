@@ -1,0 +1,18 @@
+.App {
+  &__header {
+    width: 100%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    height: 80px;
+    padding: 1em 2em;
+    font-size: 28px;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
