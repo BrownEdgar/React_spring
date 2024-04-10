@@ -1,9 +1,23 @@
 h1 {
-    color: white;
-    font-weight: 300;
-    z-index: 1; /* Ensure the content is above the overlay */
-    background-color: rgba(0, 0, 0, 0.566);
-    padding: 0.4em 1em;
-    width: 20%;
-    text-align: center;
-  }
+  color: white;
+  font-weight: 300;
+  z-index: 1; /* Ensure the content is above the overlay */
+  background-color: rgba(0, 0, 0, 0.566);
+  padding: 0.4em 1em;
+  text-align: center;
+}
+.App {
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  min-height: 100vh;
+}
+footer {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  border-top: 5px solid royalblue;
+  padding: 2em;
+  text-align: center;
+  color: #fff;
+}
+div[class$="Main"] {
+  padding-bottom: 100px;
+}

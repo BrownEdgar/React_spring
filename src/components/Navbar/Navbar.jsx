@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // import Home from '../Home/Home'
 import './Navbar.scss'
+import ROUTES from '../../routes'
 
 export default function Navbar() {
   return (
@@ -12,19 +13,19 @@ export default function Navbar() {
         <nav>
             <ul>
                 <li>
-                <Link to='/'>Home</Link>
+                <Link to={ROUTES.HOME}>Home</Link>
                 </li>
                 <li>
-                <Link to='/products'>Our Products</Link>
+                <Link to={ROUTES.PRODUCTS}>Our Products</Link>
                 </li>
                 <li>
-                <Link to='/news'>News</Link>
+                <Link to={ROUTES.BLOG}>Blog</Link>
                 </li>
                 <li>
-                <Link to='/about'>About</Link>
+                <Link to={ROUTES.ABOUT}>About</Link>
                 </li>
                 <li>
-                <Link to='/contact'>Contact Us</Link>
+                <Link to={ROUTES.CONTACT}>Contact Us</Link>
                 </li>
             </ul>
         </nav>
