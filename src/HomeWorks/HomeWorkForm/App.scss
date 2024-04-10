@@ -1,0 +1,59 @@
+.App {
+  width: 900px;
+  margin: 100px auto;
+  padding: 24px 48px;
+  h2 {
+    margin-top: 12px;
+  }
+  &__submit {
+    display: block;
+    margin-top: 12px;
+    padding: 0.6rem 1rem;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+  }
+  &__userName {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    input {
+      flex-grow: 1;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+    }
+  }
+  &__address {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    & div {
+      flex-basis: 49%;
+      display: flex;
+      justify-content: space-between;
+      & input {
+        width: 40%;
+      }
+    }
+    & input,
+    select {
+      flex-basis: 49%;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+    }
+  }
+}
+
+.errors {
+  margin-top: 24px;
+  color: red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

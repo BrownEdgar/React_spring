@@ -1,0 +1,29 @@
+.NavBar {
+  position: fixed;
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  font-size: 20px;
+
+  &__logo {
+    background-color: #fff;
+    padding: 0.5em 1em;
+    a {
+      color: black;
+    }
+  }
+  &__menu {
+    ul {
+      display: flex;
+      gap: 64px;
+      li {
+        a {
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
