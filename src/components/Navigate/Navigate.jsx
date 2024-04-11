@@ -1,4 +1,4 @@
-import ROUTES from "../../router";
+import ROUTES from "../../routes";
 import { Link } from 'react-router-dom';;
 import React from "react";
 import "./Navigate.scss"

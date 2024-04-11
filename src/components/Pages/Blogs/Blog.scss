@@ -12,7 +12,7 @@
     margin-bottom: 30px;
   }
   h3 {  
-    color: rgb(255, 0, 0);
+    color: royalblue  ;
     font-size: 16px;
     font-weight: 500;
   }
@@ -25,7 +25,7 @@
   &__card {
     width: 30%;
     border: 1px solid rgb(181, 179, 179);
-    background-color: #333;
+    background-color: royalblue;;
     color: white;
 
     img {
@@ -45,6 +45,7 @@
    }
   }
   &__info {
-    color: red;
+    color: white;
+    font-size: 16px;
   }
 }
