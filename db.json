@@ -6,7 +6,7 @@
       "body": "Cupidatat reprehenderit non adipisicing esse anim eiusmod sint adipisicing. Esse labore veniam qui sint in sunt excepteur labore. Dolore laboris labore cillum elit incididunt do.",
       "data": "15 aug 2004",
       "type": "web design",
-      "image": "./images/img1.png"
+      "image": "/images/img1.png"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "body": "Cupidatat reprehenderit non adipisicing esse anim eiusmod sint adipisicing. Esse labore veniam qui sint in sunt excepteur labore. Dolore laboris labore cillum elit incididunt do.",
       "data": "15 aug 2004",
       "type": "web design",
-      "image": "./images/img2.png"
+      "image": "/images/img2.png"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "body": "Cupidatat reprehenderit non adipisicing esse anim eiusmod sint adipisicing. Esse labore veniam qui sint in sunt excepteur labore. Dolore laboris labore cillum elit incididunt do.",
       "data": "15 aug 2004",
       "type": "web design",
-      "image": "./images/img3.png"
+      "image": "/images/img3.png"
     }
   ]
 }
