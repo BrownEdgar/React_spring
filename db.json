@@ -6,7 +6,7 @@
       "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
       "data":"18 july 2021",
       "type":"web design",
-      "image":"./images/blog_poster1.png"
+      "image":"/images/blog_poster1.png"
     },
     {
       "id":"2",
@@ -14,7 +14,7 @@
       "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
       "data":"18 july 2021",
       "type":"web design",
-      "image":"./images/blog_poster2.png"
+      "image":"/images/blog_poster2.png"
     },
     {
       "id":"3",
@@ -22,7 +22,7 @@
       "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
       "data":"18 july 2021",
       "type":"web design",
-      "image":"./images/blog_poster3.png"
+      "image":"/images/blog_poster3.png"
     }
   ]  
   
