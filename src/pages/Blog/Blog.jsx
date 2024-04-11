@@ -1,21 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './Blog.scss'
+import axios from 'axios'
+import trancate from '../../helpers/truncate';
+import { Link } from 'react-router-dom'
 
 export default function Blog() {
+  const [blogs, setBlogs] = useState([])
+
+  useEffect(() => {
+    axios(import.meta.env.VITE_DB_URL)
+    .then(res => setBlogs(res.data))
+  },[])
+
   return (
     <div className='Blog'>
       <div className="Blog__photo">
-        <img src="./images/blog.jpg" alt="trees" />
+        
       </div>
-      <div className="Blog__all">
-        <div className="Blog__about">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-        </div>
-        <div className="Blog__title">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis cupiditate voluptatem quaerat ad id, esse cum repellat, veritatis dolorem ab debitis iste reprehenderit. Ex quod explicabo velit nisi inventore!</p>
-        </div>
+      <div className="Blog__wrapper">
+        {blogs.map(elem => {
+          return (
+            <div key={elem.id}>
+              <img src={elem.images}/>
+              <div className='Blog__info'>
+                <p>{elem.date}</p>
+                <h2>{trancate(elem.title, 80)}</h2>
+                {/* <p>{elem.desc}</p> */}
+                <Link to={`${elem.id}`}>{elem.btn}</Link>
+              </div>
+            </div>
+          )
+        })}
       </div>
-      
     </div>
   )
 }
