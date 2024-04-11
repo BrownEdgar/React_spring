@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom'
+import ROUTES from '../../routes';
+import moment from 'moment';
+import axios from 'axios';
+import WhateverIcon from '../../assets/clapicon.svg?react'
 
 import './SingleBlog.scss'
-import { Link, useParams } from 'react-router-dom'
-import axios from 'axios';
-import ROUTES from '../../routes';
 
 export default function SingleBlog() {
   const { id } = useParams()
@@ -14,16 +16,21 @@ export default function SingleBlog() {
   useEffect(() => {
     axios(import.meta.env.VITE_DB_URL + `/${id}`)
       .then(res => setBlog(res.data))
-  }, [])
+  }, [id])
 
   useEffect(() => {
-    axios(import.meta.env.VITE_DB_URL, {
-      params: {
-        _limit: 6
-      }
-    })
-      .then(res => setOtherBlogs(res.data))
+    axios(import.meta.env.VITE_DB_URL + '?_sort=claps')
+      .then(res => setOtherBlogs(res.data.slice(-6)))
   }, [])
+
+  const handleClaps = () => {
+    const data = {
+      claps: (blog.claps || 0) + 1
+    }
+    axios.patch(import.meta.env.VITE_DB_URL + `/${id}`, data)
+      .then(res => setBlog(res.data))
+  }
+
   return (
     <div className='SingleBlog'>
       <div className="SingleBlog__Element">
@@ -31,11 +38,51 @@ export default function SingleBlog() {
           <Link to={`/${ROUTES.BLOG}`}>All Blogs</Link>
         </div>
         <h1 className='title'>{blog.title}</h1>
-        <img src={blog.images} />
+        <img src={blog.poster} />
         <div className='SingleBlog__desc'>
-          <p>{blog?.desc?.slice(0, textSlice)}</p>
-          <p>{blog?.desc?.slice(textSlice)}</p>
+          {blog?.description?.map((elem, index) => {
+            return (
+              <p key={index}>{elem}</p>
+            )
+          })}
+          <ul className='SingleBlog__desc-list'>
+            {blog?.list?.map((elem, index) => {
+              return (
+                <li key={index}>{elem}</li>
+              )
+            })}
+          </ul>
         </div>
+        <hr />
+        <div className='SingleBlog__footer'>
+          <button className='SingleBlog__footer-icon' onClick={handleClaps}>
+            <WhateverIcon />
+          </button>
+          <p>{blog.claps || 0}</p>
+        </div>
+      </div>
+      <div className="SingleBlog__topList">
+        {
+          otherBlogs.map(elem => {
+            return (
+              <div key={elem.id}>
+                <Link to={`/blog/${elem.id}`}>
+                  <img src={elem.poster} />
+                </Link>
+                <div>
+                  <h2>{elem.title}</h2>
+                  <p>
+                    <i className="bi bi-calendar2"></i>
+                    {moment(elem.createdAt).format('DD | MMM | YYYY')}
+                  </p>
+                  <p>
+
+                  </p>
+                </div>
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   )

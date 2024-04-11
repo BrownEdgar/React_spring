@@ -21,7 +21,7 @@ export default function Blog() {
         {blogs.map(elem => {
           return (
             <Link key={elem.id} to={`${elem.id}`}>
-              <img src={elem.images} />
+              <img src={elem.poster} />
               <div className='Blog__info'>
                 <h2>{trancate(elem.title, 80)}</h2>
               </div>

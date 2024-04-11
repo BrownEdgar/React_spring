@@ -25,5 +25,51 @@
       font-size: 18px;
       margin: 16px auto;
     }
+    &-list {
+      list-style: disc;
+      padding-left: 40px;
+      margin: 40px auto;
+      li {
+        margin-bottom: 10px;
+        font-size: 20px;
+        &::marker {
+          color: orangered;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+  &__topList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 4px;
+    margin-top: 100px;
+    & > div {
+      display: flex;
+      gap: 10px;
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 140px;
+        height: 140px;
+      }
+      p {
+        i {
+          color: orangered;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+  &__footer {
+    padding: 1em;
+    display: flex;
+    gap: 8px;
+    &-icon {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
   }
 }
