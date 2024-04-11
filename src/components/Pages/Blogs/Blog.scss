@@ -1,5 +1,6 @@
 .Blog {
   max-width: 1440px;
+
   h1,
   h3 {
     text-align: center;
@@ -10,8 +11,8 @@
     margin-top: 2px;
     margin-bottom: 30px;
   }
-  h3 {
-    color: red;
+  h3 {  
+    color: rgb(255, 0, 0);
     font-size: 16px;
     font-weight: 500;
   }
@@ -24,7 +25,9 @@
   &__card {
     width: 30%;
     border: 1px solid rgb(181, 179, 179);
-   
+    background-color: #333;
+    color: white;
+
     img {
       max-width: 100%;
     }
@@ -37,13 +40,11 @@
     p {
       font-size: 12px;
     }
-    a{
-        color: #333;
-
-    }
-
+   a{
+    color: white;
+   }
   }
-  &__info{
+  &__info {
     color: red;
   }
 }

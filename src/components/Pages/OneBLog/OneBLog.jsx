@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
-import "./SIngleBlog.scss"
+import "./OneBLog.scss"
 export default function SIngleBlog() {
   const { id } = useParams()
   const [blog, setBlog] = useState({})
@@ -14,7 +14,7 @@ export default function SIngleBlog() {
   }, [])
   
   return (
-    <div className='SinngleBlog'>
+    <div className='OneBLog'>
       <img src={blog.image} alt="" />
       <span>{blog.data}</span>
       <h1>{blog.title}</h1>

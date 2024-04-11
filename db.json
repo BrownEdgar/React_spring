@@ -1,29 +1,28 @@
 {
-  "blogs":[
+  "blogs": [
     {
-      "id":"1",
-      "title":"Cupidatat eiusmod labore non nulla consequat .",
-      "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
-      "data":"18 july 2021",
-      "type":"web design",
-      "image":"./images/blog_poster1.png"
+      "id": "1",
+      "title": "Culpa adipisicing ipsum irure",
+      "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
+      "data": "08 nov 2002",
+      "type": "web design",
+      "image": "./images/img1.png"
     },
     {
-      "id":"2",
-      "title":"Cupidatat eiusmod labore non nulla consequat.",
-      "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
-      "data":"18 july 2021",
-      "type":"web design",
-      "image":"./images/blog_poster2.png"
+      "id": "2",
+      "title": "Culpa adipisicing ipsum irure",
+      "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
+      "data": "08 nov 2002",
+      "type": "web design",
+      "image": "./images/img2.png"
     },
     {
-      "id":"3",
-      "title":"Cupidatat eiusmod labore non nulla consequat .",
-      "body":"Nulla consequat Lorem cupidatat sint velit adipisicing officia veniam aute. Laborum consectetur ut ipsum deserunt quis in eu aute deserunt dolore. Nostrud aute sint esse ut ipsum id velit irure ad amet sit do.",
-      "data":"18 july 2021",
-      "type":"web design",
-      "image":"./images/blog_poster3.png"
+      "id": "3",
+      "title": "Culpa adipisicing ipsum irure",
+      "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
+      "data": "08 nov 2002",
+      "type": "web design",
+      "image": "./images/img3.png"
     }
-  ]  
-  
-} 
+  ]
+}
