@@ -6,7 +6,7 @@
       "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
       "data": "08 nov 2002",
       "type": "web design",
-      "image": "./images/img1.png"
+      "image": "/images/img1.png"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
       "data": "08 nov 2002",
       "type": "web design",
-      "image": "./images/img2.png"
+      "image": "/images/img2.png"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "body": "Duis incididunt est dolore nisi tempor sint sint. Laborum commodo qui officia do labore. In culpa voluptate est sint laboris deserunt Lorem mollit est et ad.",
       "data": "08 nov 2002",
       "type": "web design",
-      "image": "./images/img3.png"
+      "image": "/images/img3.png"
     }
   ]
 }
