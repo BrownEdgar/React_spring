@@ -1,0 +1,28 @@
+.Product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+  }
+  &__slider {
+    width: 40%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__otherProducts {
+    h3 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.divider {
+  flex-grow: 1;
+}

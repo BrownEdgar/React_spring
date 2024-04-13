@@ -1,8 +1,28 @@
-@import "../../../sass/mixins";
-
 .Products {
-  @include bgImage(
-    "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  );
-  @include center();
+  h1 {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    padding: 4em 2em;
+    text-align: center;
+  }
+  &__container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
 }

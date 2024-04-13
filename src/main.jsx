@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Router/HomeWorks/HW2/App";
+import App from "./Router/HomeWorks/HW3/App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
