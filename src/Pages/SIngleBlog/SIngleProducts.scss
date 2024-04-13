@@ -1,0 +1,40 @@
+.SingleBlog{
+    width: 1440px;
+    &__product{
+        background-color: green;
+        width: 900px;
+        height: 700px;
+        border-radius: 16px;
+        border: 2px solid white;
+        color: white;
+        padding: 1em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 26px;
+    }
+    &__image{
+        border-radius: 16px;
+        width: 300px;
+    }
+    a{
+        background-color: green;
+        border: white 2px solid;
+        padding: 4px 8px;
+        color: white;
+        font-size: 18px;
+        border-radius:12px ;
+
+    }
+    &__link{
+        position: absolute;
+        bottom: 35px;
+        left: 20px;
+        :hover{
+            color: green;
+            background-color: white;
+        }
+    }
+
+}

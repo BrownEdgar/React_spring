@@ -1,15 +1,15 @@
-import ROUTES from "../../router";
+import ROUTES from "../../routes";
 import { Link } from 'react-router-dom';;
 import React from "react";
-import "./Navigate.scss"
+import "./Navigation.scss"
 
-export default function navigation() {
+export default function Navigation() {
   return (
     <header>
       <div className="logo">
         <Link to={ROUTES.HOME}>LOGO</Link>
       </div>
-      <Link to={ROUTES.BLOG}>BLog</Link>
+      <Link to={ROUTES.BLOG}>Products</Link>
     </header>
   );
 }
