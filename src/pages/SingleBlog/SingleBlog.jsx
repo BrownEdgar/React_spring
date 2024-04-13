@@ -9,7 +9,7 @@ export default function SingleBlog() {
     const [blog, setBlog] = useState({})
 
     useEffect(() => {
-        axios(import.meta.env.VITE_DB_URL + `/${id}`)
+        axios('http://localhost:3000/blogs' + `/${id}`)
         .then(res => setBlog(res.data))
       },[])
 

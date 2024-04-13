@@ -15,6 +15,7 @@ export default function Navbar() {
                 <li><Link to={ROUTES.CONTACT}>Contact</Link></li>
                 <li><Link to={ROUTES.BLOG}>Blog</Link></li>
                 <li><Link to={ROUTES.TEAM}>Team</Link></li>
+                <li><Link to={ROUTES.PRODUCTS}>Products</Link></li>
             </ul>
         </nav>
     </header>

@@ -8,7 +8,7 @@ export default function Blog() {
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
-    axios(import.meta.env.VITE_DB_URL)
+    axios('http://localhost:3000/blogs')
     .then(res => setBlogs(res.data))
   },[])
 
@@ -25,7 +25,6 @@ export default function Blog() {
               <div className='Blog__info'>
                 <p>{elem.date}</p>
                 <h2>{trancate(elem.title, 80)}</h2>
-                {/* <p>{elem.desc}</p> */}
                 <Link to={`${elem.id}`}>{elem.btn}</Link>
               </div>
             </div>
