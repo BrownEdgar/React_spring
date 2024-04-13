@@ -1,19 +1,20 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import ROUTES from "./routes";
+import Navigation from "./components/Navigation/Navigation";
 import "./App.css";
-import ROUTES from "./router";
 import Blog from "./components/Pages/Blogs/Blog";
-import Navigate from "./components/Navigate/Navigate";
 import SIngleBlog from "./components/Pages/SIngleBlog/SIngleBlog";
 
 export default function App() {
   return (
-    <>
-      <Navigate />
+    <div className="App">
+      <Navigation />
       <Routes>
-        <Route path={ROUTES.BLOG} element={<Blog />} />
+        <Route path={ROUTES.BLOG}   element={<Blog />} />
         <Route path={ROUTES.SINGLEBLOG} element={<SIngleBlog />} />
+        <Route path="*" element={<Navigate to={ROUTES.HOME} />} />
       </Routes>
-    </>
+    </div>
   );
 }

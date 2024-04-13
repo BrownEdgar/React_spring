@@ -1,16 +1,25 @@
-.SinngleBlog{
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    p{
-        width: 50%;
-    }    
-    span{
-        color: red;
-    }
-    img{
+.SingleBlog{
+    width: 900px;
+    &__product{
         width: 600px;
-        height: 300px;
+        height: 700px;
+        border-radius: 16px;
+        border: 2px solid purple;
+        padding: 1em;
     }
+    &__image{
+        border-radius: 16px;
+        width: 300px;
+    }
+    a{
+        background-color: #333;
+        padding: 4px 8px;
+        color: white;
+        font-size: 18px;
+        border-radius:12px ;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+
 }

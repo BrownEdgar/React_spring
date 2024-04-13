@@ -1,0 +1,14 @@
+.App {
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  min-height: 100vh;
+
+  footer {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    border-top: 5px solid royalblue;
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+
+  }
+}
