@@ -1,0 +1,97 @@
+.singleProd {
+  padding: 50px;
+  &__Elem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 60%;
+    .img-part {
+      margin: 0 auto;
+      img {
+        width: 330px;
+        height: 400px;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      ul {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+        li {
+          padding: 10px 20px;
+          color: white;
+          text-align: center;
+          border-radius: 20px 40px;
+          background-color: black;
+          font-weight: 400;
+          text-transform: capitalize;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: whitesmoke;
+            transition: all 0.3s ease-in-out;
+            color: black;
+          }
+        }
+      }
+      button {
+        background-color: green;
+        width: 50%;
+        justify-content: center;
+        display: flex;
+        color: white;
+        border-radius: 20px;
+        border: 0;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
+    }
+  }
+  .other-products {
+    h2 {
+      text-align: center;
+    }
+    margin-top: 50px;
+    padding: 50px;
+    background-color: whitesmoke;
+  }
+  .other-products-list {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    margin: 2em;
+    .other-product {
+      border: 1px solid rgba(128, 128, 128, 0.318);
+      padding: 25px;
+      border-radius: 5px;
+      img {
+        width: 250px;
+        height: 300px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      a {
+        background: black;
+        color: white;
+        font-size: 15px;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        padding: 10px 15px;
+        &:hover {
+          background-color: rgb(225, 224, 224);
+          color: black;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

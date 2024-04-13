@@ -4,6 +4,7 @@ const ROUTES = {
     PRODUCTS : 'products',
     BLOG: '/blog',
     SINGLEBLOG: 'blog/:id',
+    SINGLEPRODUCT: 'products/:id',
     CONTACT: 'contact',
   }
   
