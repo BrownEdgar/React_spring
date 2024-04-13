@@ -1,3 +1,104 @@
 {
-  "users": []
+  "products": [
+    {
+      "id": "1",
+      "title": "Good Product",
+      "poster": "/images/pr1.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "100$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/04/05",
+      "claps": 16
+    },
+    {
+      "id": "2",
+      "title": "Good Product",
+      "poster": "/images/pr2.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "120$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/04/06",
+      "claps": 15
+    },
+    {
+      "id": "3",
+      "title": "Good Product",
+      "poster": "/images/pr3.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "100$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/05/08",
+      "claps": 1
+    },
+    {
+      "id": "4",
+      "title": "Good Product",
+      "poster": "/images/pr4.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "90$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/02/05",
+      "claps": 148
+    },
+    {
+      "id": "5",
+      "title": "Good Product",
+      "poster": "/images/pr5.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "190$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/04/09",
+      "claps": 29
+    },
+    {
+      "id": "6",
+      "title": "Good Product",
+      "poster": "/images/pr6.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "156$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/04/09",
+      "claps": 29
+    },
+    {
+      "id": "7",
+      "title": "Good Product",
+      "poster": "/images/pr7.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "99$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/08/05",
+      "claps": 132
+    },
+    {
+      "id": "8",
+      "title": "Good Product",
+      "poster": "/images/pr8.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "130$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/02/07",
+      "claps": 143
+    },
+    {
+      "id": "9",
+      "title": "Good Product",
+      "poster": "/images/pr9.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "99$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/01/05",
+      "claps": 148
+    },
+    {
+      "id": "10",
+      "title": "Good Product",
+      "poster": "/images/pr10.jpg",
+      "body": "The good product for life, you can use it lav?",
+      "prise": "257$",
+      "info": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae veritatis nam harum quos atque, maiores explicabo cumque esse fuga odit, consequatur eligendi fugiat facere dolores accusamus qui possimus, reprehenderit sequi?",
+      "createdAt": "2024/02/07",
+      "claps": 65
+    }
+  ]
 }

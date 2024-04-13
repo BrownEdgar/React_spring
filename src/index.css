@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +28,65 @@ pre {
   font-size: 30px;
   color: orange;
   font-weight: 100;
+}
+
+.slick-slider {
+  height: 800px;
+}
+
+.slick-list {
+  height: 100%;
+
+}
+
+.slick-track {
+  height: 100%;
+}
+
+.slick-dots li button {
+  background-color: gold;
+}
+
+.slick-slide {
+  transition: 0.3s;
+}
+
+.slick-slide>div {
+  padding: 20px;
+}
+
+.slick-center {}
+
+.slick-center>div {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.slick-slide.slick-center {
+  background-color: red;
+  padding: 16px;
+}
+
+.slick-slide:not(.slick-center) {
+  filter: grayscale(100%) blur(5px);
+  scale: 0.9;
+}
+
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -40px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 36px;
+  color: orangered;
 }
