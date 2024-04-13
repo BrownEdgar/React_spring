@@ -1,34 +1,76 @@
 {
-  "users": [
+  "cards": [
     {
-      "id": "uBSQCm",
-      "title": "jimi",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacus nulla, maximus ut ornare non, faucibus vitae erat. Nulla suscipit, est vitae bibendum dignissim, dui lorem bibendum ante, \n"
+      "id": "1",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8a393c37-94de-49e3-a8df-7362a238f3fe/air-max-dn-shoes-dFBSQh.png",
+      "name": "Nike Air Max Dn",
+      "price": "160$",
+      "info": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that’s comfortable enough to wear from day to night. Go ahead—Feel the Unreal.",
+      "claps": 141
     },
     {
-      "id": "uhqWQw",
-      "title": "George",
-      "body": "Quisque dictum eget libero id viverra. Quisque fermentum condimentum libero, dignissim consequat mauris volutpat in. Aenean suscipit vulputate metus. Maecenas ac elit sollicitudin, elementum dolor non, posuere felis. Morbi pulvinar hendrerit ante. Nunc consectetur urna id fringilla consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sed felis in mauris efficitur volutpat.\n"
+      "id": "2",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/dunk-low-retro-mens-shoes-5FQWGR.png",
+      "name": "Nike Dunk Low Retro",
+      "price": "115$",
+      "info": "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colors. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century ",
+      "claps": 225
     },
     {
-      "id": "GXuKQk",
-      "title": "Jeremy",
-      "body": "Quisque dictum eget libero id viverra. Quisque fermentum condimentum libero, dignissim consequat mauris volutpat in. Aenean suscipit vulputate metus. Maecenas ac elit sollicitudin, elementum dolor non, posuere lis in mauris efficitur volutpat."
+      "id": "3",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d90e3112-ea64-4068-be0d-1e832af89fe8/air-max-dn-mens-shoes-27XkSQ.png",
+      "name": "Nike Air Max Dn",
+      "price": "160$",
+      "info": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that’s comfortable enough to wear from day to night. Go ahead—Feel the Unreal. ",
+      "claps": 193
     },
     {
-      "id": "RRVhL3",
-      "title": "Jake",
-      "body": "Quisque dictum eget libero id viverra. Quisque fermentum condimentum libero, dignissim consequat mauris volutpat in. Aenean suscipit vulputate metus. Maecenas ac elit sollicitudin, elementum dolor non, posuere felis. Morbi pulvinar hendrerit ante. Nunc consectetur urna id fringilla consequa malesuada fames ac ante ipsum primis in faucibus. Aenean sed felis in mauris efficitur volutpat."
+      "id": "4",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/82ea163d-5701-4cbb-b3bf-def25d1d5c8d/free-metcon-5-mens-workout-shoes-H0Qszz.png",
+      "name": "Nike Free Metcon",
+      "price": "120$",
+      "info": "When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.",
+      "claps": 42
     },
     {
-      "id": "iblsnV",
-      "title": "Carla",
-      "body": "Quisque dictum eget libero id viverra. Quisque fermentum  elementumcibus. Aenean sed felis in mauris efficitur volutpat."
+      "id": "5",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/i1-6a253663-e5cd-49f6-918f-6685dc6b1f85/air-jordan-1-mid-shoes-X5pM09.png",
+      "name": "Air Jordan 1 Mid",
+      "price": "125$",
+      "info": "Inspired by the original AJ1, the Air Jordan 1 Mid offers fans a chance to follow in MJ's footsteps. Fresh color trims the clean, classic materials, imbuing modernity into a classic design.",
+      "claps": 34
     },
     {
-      "id": "2_g7Rl",
-      "title": "Stacy",
-      "body": "Maecenas ac elit sollicitudin, elementum dolor non, posuere d felis in mauris efficitur volutpat."
+      "id": "6",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8f2b32ed-34f4-4065-ab8f-f3a9d0aa47a8/dunk-low-retro-se-mens-shoes-qTZ3Jk.png",
+      "name": "Air Jordan 1 Low SE",
+      "price": "87$",
+      "info": "You already know they're crisp and clean. They're made of leather and textiles in the upper and have that iconic Nike Air comfort in the sole. They're gonna go with any outfit—so what's it gonna be?",
+      "claps": 33
+    },
+    {
+      "id": "7",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fliho8ygw5nogbmtcbft/air-vapormax-plus-mens-shoes-nC0dzF.png",
+      "name": "Nike Air VaporMax Plus",
+      "price": "210$",
+      "info": "The Nike Air VaporMax Plus looks to the past and propels you into the future. Nodding to the 1998 Air Max Plus with its floating cage, padded upper and heel logo, it adds revolutionary VaporMax Air technology to ramp up the comfort and create a modern look.",
+      "claps": 87
+    },
+    {
+      "id": "8",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/67720f48-cbdb-4b74-94ad-f79d675cbbe3/air-max-plus-mens-shoes-x9G2xF.png",
+      "name": "Nike Air Max Plus",
+      "price": "150$",
+      "info": "Let your attitude have the edge with flame-like caging that adds heat to the streets while airy mesh keeps you cool. The Nike Air Max Plus gives you a tuned Nike Air experience that offers premium stability and unbelievable cushioning.",
+      "claps": 132
+    },
+    {
+      "id": "9",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b434966d-c850-4aa7-be6c-e99c0e236362/air-max-plus-mens-shoes-3mH52P.png",
+      "name": "Nike Air Max Plus",
+      "price": "180$",
+      "info": "Let your attitude have the edge in the Air Max Plus, featuring a Tuned Air experience for premium stability and unbelievable cushioning. It celebrates defiant style by combining the original wavy design lines, plastic accents and airy mesh. ",
+      "claps": 61
     }
   ]
 }

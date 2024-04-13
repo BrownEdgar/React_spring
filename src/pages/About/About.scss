@@ -3,6 +3,44 @@
 
 
 .About{
-    @include bgRoules('https://images.unsplash.com/photo-1560910615-9eaa2e704e63?q=80&w=3125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    @include flexCenter(600px);
+    // @include bgRoules('https://images.unsplash.com/photo-1560910615-9eaa2e704e63?q=80&w=3125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    // @include flexCenter(600px);
+    background-color: black;
+    color: white;
+    &__opening{
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 1000;
+        font-size: 25px;
+        & > div{
+            font-size: 65px;
+            font-weight: 1000;
+            
+        }
+    }
+    &__info{
+        background-color: white;
+        padding: 50px;
+        color: black;
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        & > div{
+            display: flex;
+        justify-content: center;
+        }
+        p{
+            border: 2px solid black;
+            padding: 15px;
+            font-size: 20px;
+            width: 650px;
+        }
+        img{
+            width: 300px;
+        }
+
+    }
 }

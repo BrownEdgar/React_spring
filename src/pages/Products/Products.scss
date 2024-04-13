@@ -2,7 +2,31 @@
 
 
 .Products{
+    &__wraper{
+        margin-left: 120px;
+        height:auto;
+        width: 1240px;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: serif;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
 
-    @include bgRoules('https://images.unsplash.com/photo-1618426703263-9b751af305a6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzIzfHxiYWtlcnl8ZW58MHx8MHx8fDA%3D');
-    @include flexCenter(600px);
+    & > a {
+        position: relative;
+        overflow: hidden;
+        flex-basis: 30%;
+        background-color: #eee;
+        color: #222;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
 }
