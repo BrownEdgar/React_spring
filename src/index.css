@@ -20,7 +20,7 @@ body {
     rgba(223, 115, 255, 1) 100%
   ); */
   /* background-color: #393838; */
-
+  background-color: bisque;
 }
 
 ul {
@@ -29,4 +29,54 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.slick-slider {
+  height: 500px;
+}
+
+.slick-list {
+  height: 100%;
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.slick-track {
+  height: 500px;
+}
+
+.slick-slide {
+  transition: 0.3s;
+}
+
+.slick-slide > div {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 15px;
+  font-size: 18px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  &:hover {
+    &::before{
+      color: burlywood;
+    }
+  }
+}
+.slick-prev {
+  left: 70px;
+}
+
+.slick-next {
+  right: 70px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 40px;
+  color: black;
 }
