@@ -12,6 +12,7 @@ export const initialState = {
 
 }
 
+
 function reducer(state = initialState, { type, payload }) {
 
   switch (type) {
