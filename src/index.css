@@ -7,8 +7,6 @@
 }
 
 body {
-
-  /* background-color: royalblue; */
   max-width: 1440px;
   margin: 0 auto;
   line-height: 1.5;
@@ -40,8 +38,6 @@ body {
 
 .slick-list {
   height: 100%;
-
-
 }
 
 .slick-track {
@@ -55,8 +51,6 @@ body {
 .slick-slide {
   transition: 0.3s;
   text-align: center;
-
-
 }
 
 .slick-slide img {
