@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './components/HW_form2/App'
+import App from './components/HW_slide/App'
 
 import "./index.css";
 
