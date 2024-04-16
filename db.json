@@ -1,14 +1,94 @@
 {
-  "posts": [
+  "products": [
     {
-      "id": "Q7S",
-      "title": "test2",
-      "message": "lasjflasjfaklsf"
+      "id": "1",
+      "title": "Iphone 14",
+      "price": 700,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "mobile",
+      "color": ["white", "black", "grey"],
+      "storage": ["128GB", "256GB", "512GB"],
+      "img": "https://m.media-amazon.com/images/I/619f09kK7tL._AC_UF894,1000_QL80_.jpg"
     },
     {
-      "id": "2hI",
-      "title": "test4",
-      "message": "askfjaklsfjalksfja\n"
+      "id": "2",
+      "title": "Iphone 15 Pro Max",
+      "price": 1500,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "mobile",
+      "color": ["white", "black", "grey"],
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525494_sd.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Iphone 14 Pro",
+      "price": 1000,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "mobile",
+      "color": ["white", "black", "grey"],
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "img": "https://m.media-amazon.com/images/I/61RklF9NgpL._AC_SX679_.jpg"
+    },
+    {
+      "id": "4",
+      "title": "iPad 10th Gen",
+      "price": 350,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "tablet",
+      "color": ["white", "black", "grey"],
+      "storage": ["64GB", "256GB"],
+      "img": "https://m.media-amazon.com/images/I/61uA2UVnYWL._AC_SX522_.jpg"
+    },
+    {
+      "id": "5",
+      "title": "iPad Air",
+      "price": 500,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "tablet",
+      "color": ["white", "black", "grey"],
+      "storage": ["64GB", "256GB"],
+      "img": "https://m.media-amazon.com/images/I/71VbHaAqbML._AC_SX522_.jpg"
+    },
+    {
+      "id": "6",
+      "title": "iPad Pro 11-inch",
+      "price": 1300,
+      "desc": "The iPad is a touchscreen tablet PC made by Apple. The original iPad debuted in 2010. Apple has four iPad product lines: iPad, iPad mini, iPad Air and iPad Pro.",
+      "type": "tablet",
+      "color": ["white", "black", "grey"],
+      "storage": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+      "img": "https://m.media-amazon.com/images/I/81WWJj1RedL._AC_SX522_.jpg"
+    },
+    {
+      "id": "7",
+      "title": "AirPods 3rd Gen",
+      "price": 180,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "airpods",
+      "color": [],
+      "storage": [],
+      "img": "https://m.media-amazon.com/images/I/613kwL5lVRL._AC_SX522_.jpg"
+    },
+    {
+      "id": "8",
+      "title": "AirPods Pro 2",
+      "price": 250,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "airpods",
+      "color": [],
+      "storage": [],
+      "img": "https://m.media-amazon.com/images/I/61sRKTAfrhL._AC_SX522_.jpg"
+    },
+    {
+      "id": "9",
+      "title": "AirPods Max",
+      "price": 500,
+      "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
+      "type": "airpods",
+      "color": [],
+      "storage": [],
+      "img": "https://m.media-amazon.com/images/I/81thV7SoLZL._AC_SX522_.jpg"
     }
   ]
 }

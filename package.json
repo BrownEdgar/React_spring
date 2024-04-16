@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "concurrently \"npm run dev\" \"json-server --watch db.json --port 8000\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -13,11 +14,13 @@
     "axios": "^1.6.7",
     "bootstrap-icons": "^1.11.3",
     "classnames": "^2.5.1",
+    "concurrently": "^8.2.2",
     "json-server": "^1.0.0-alpha.23",
     "nanoid": "^5.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
+    "react-slick": "^0.30.2",
     "react-spinners": "^0.13.8",
     "sass": "^1.71.1"
   },
