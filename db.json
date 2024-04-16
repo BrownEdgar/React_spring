@@ -12,13 +12,13 @@
     },
     {
       "id": "2",
-      "title": "Iphone 15 Pro Max",
+      "title": "Iphone 15 Pro",
       "price": 1500,
       "desc": "The iPhone is a line of smartphones produced by Apple Inc. that use Apple's own iOS mobile operating system.",
       "type": "mobile",
       "color": ["white", "black", "grey"],
       "storage": ["128GB", "256GB", "512GB", "1TB"],
-      "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525494_sd.jpg"
+      "img": "https://m.media-amazon.com/images/I/71hDhuRKjqL._AC_SX522_.jpg"
     },
     {
       "id": "3",
