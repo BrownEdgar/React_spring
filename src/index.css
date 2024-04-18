@@ -11,6 +11,7 @@ body {
   margin: 0 auto;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 a {
@@ -21,12 +22,9 @@ ul {
   list-style: none;
 }
 
-body {
-  color: white;
-  background-color: rgb(255, 236, 213);
-}
 
 
+/* 
 .slick-slider {
   max-width: 1240px;
   margin-left: 95px;
@@ -110,4 +108,4 @@ button {
 .slick-prev, .slick-next>button {
   width: 40px;
   height: 40px;
-}
+} */
