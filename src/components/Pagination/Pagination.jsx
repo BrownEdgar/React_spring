@@ -7,6 +7,7 @@ export default function Pagination({ total, page, perPage, changePage }) {
   for (let i = 1; i < Math.ceil(total / perPage); i++) {
     list.push(i)
   }
+
   return (
     <div className='Pagination'>
       <ul className='Pagination__list'>
