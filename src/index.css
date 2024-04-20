@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid royalblue;
+
   padding: 10px;
 }
 
@@ -91,4 +91,9 @@ pre {
 .slick-next::before {
   font-size: 36px;
   color: orangered;
+}
+
+h2 {
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+
 }
