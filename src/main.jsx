@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from '@/useTransition/App'
+import App from './App'
 import './index.css';
-import ErrorBoundry from '@/Error/ErrorBoundry';
+import { Provider } from 'react-redux';
+import store from './app/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ErrorBoundry>
+  <Provider store={store}>
     <App />
-  </ErrorBoundry>
+  </Provider>
+
 )
