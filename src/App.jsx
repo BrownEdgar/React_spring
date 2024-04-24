@@ -1,50 +1,30 @@
-import React, { useState } from 'react'
-import Modal from './components/Modal/Modal';
-import './App.css'
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./App.css";
+import {
+  getCounter,
+  minusCount,
+  plusCount,
+} from "./features/counter/counterSlice";
+import axios from "axios";
+import { saveTodos, deleteTodo, getTodos } from "./features/todos/todosSlice";
 
 export default function App() {
-  const [cities, setCities] = useState(['Tokio', "Amsterdam", "Yerevan", "London", "Berlin"]);
-  const [curerntIndex, setCurerntIndex] = useState(null)
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleModal = () => setIsOpen(!isOpen);
-  const deletCityByIndex = () => {
-    setCities(cities.toSpliced(curerntIndex, 1));
-    setCurerntIndex(null)
-  }
-
+  const dispatch = useDispatch();
+  const count = useSelector(getCounter);
+  const todos = useSelector(getTodos);
+  useEffect(() => {
+    axios("https://jsonplaceholder.typicode.com/todos?_limit=10").then((res) =>
+      dispatch(saveTodos(res.data))
+    );
+  }, []);
   return (
-    <div className='App'>
-      {isOpen ? (
-        <Modal toggleModal={toggleModal} theme="dark">
-
-          <h1>Are you Sure?</h1>
-          <div className="Modal__buttons">
-            <button onClick={toggleModal}>cancel</button>
-            <button onClick={() => {
-              deletCityByIndex()
-              toggleModal()
-            }}>delete</button>
-          </div>
-
-        </Modal>
-      ) : null}
-
-      <div className="App__list">
-        {
-          cities.map((elem, index) => {
-            return (
-              <div key={elem}>
-                <h2>{elem}</h2>
-                <button onClick={() => {
-                  toggleModal()
-                  setCurerntIndex(index)
-                }}>Delete</button>
-              </div>
-            )
-          })
-        }
-      </div>
+    <div className="App">
+      <h1>Count: {count}</h1>
+      <button onClick={() => dispatch(plusCount())}>Plus</button>
+      <button onClick={() => dispatch(minusCount())}>Minus</button>
+      <h1>Todos:{JSON.stringify(todos)}</h1>
+      <button onClick={() => dispatch(deleteTodo())}>Delete last todo</button>
     </div>
-  )
+  );
 }
