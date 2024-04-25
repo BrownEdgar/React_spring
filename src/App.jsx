@@ -1,26 +1,26 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import ROUTES from './routes'
-import { Home, Blog, Contact, ErrorPage, Team, SingleBlog, Products, } from './pages'
-import MainLayout from './layouts/MainLayout'
-import SingleProducts from './pages/SingleProducts/SingleProducts'
+import React, { useEffect } from 'react'
+import './App.scss'
+import { useSelector, useDispatch } from 'react-redux'
+import { addCounter } from './features/counter/counterSlice'
+import { saveComments } from './features/comments/commentsSlice'
+import axios from 'axios'
 
 export default function App() {
+  const counter = useSelector((state) => state.counter)
+  const comments = useSelector((state) => state.comments)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    axios( 'https://jsonplaceholder.typicode.com/comments?_limit=10' )
+    .then(res => dispatch(saveComments(res.data)))
+  })
 
   return (
     <div>
-      <Routes>
-        <Route path={ROUTES.HOME} element={<MainLayout/>}>
-          <Route index element={<Home/>}/>
-          <Route path={ROUTES.CONTACT} element={<Contact/>}/>
-          <Route path={ROUTES.BLOG} element={<Blog/>}/>
-          <Route path={ROUTES.SINGLEBLOG} element={<SingleBlog/>}/>
-          <Route path={ROUTES.TEAM} element={<Team/>}/>
-          <Route path={ROUTES.PRODUCTS} element={<Products/>}/>
-          <Route path={ROUTES.SINGLEPRODUCTS} element={<SingleProducts/>}/>
-          <Route path='*' element={<ErrorPage/>}/>
-        </Route>
-      </Routes>
+      <h1>Redux counter : {counter}</h1>
+      <h2>Redux comments : {JSON.stringify(comments)}</h2>
+      <button onClick={() => dispatch(addCounter())}>plus</button>
     </div>
   )
 }
+
