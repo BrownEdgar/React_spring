@@ -38,7 +38,6 @@ export default function App() {
           </tr>
         </thead>
         <tbody>
-          {/* Render filtered users */}
           {users
             .filter(
               (user) => !languageFilter || user.language === languageFilter
@@ -47,11 +46,7 @@ export default function App() {
               <tr key={user.id}>
                 <td>{user.firstName}</td>
                 <td>{user.lastName}</td>
-                <td>
-                  {moment(user.registeredDate).format(
-                    "MMMM Do YYYY, h:mm:ss a"
-                  )}
-                </td>
+                <td>{user.registeredDate}</td>
                 <td>{user.language}</td>
               </tr>
             ))}
