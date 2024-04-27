@@ -1,15 +1,62 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCounter, getCounter } from "./features/counter/CounterSlice";
-
+import moment from "moment";
+import { setLanguageFilter } from "./features/users/UserSlice"; // Import the action
+import "./App.css";
 export default function App() {
+  const users = useSelector((state) => state.users.users); // Access users array from state
+  const languageFilter = useSelector((state) => state.users.languageFilter); // Access language filter from state
   const dispatch = useDispatch();
-  const counter = useSelector(getCounter);
 
   return (
     <div>
-      <h1>Redus Counter : {counter}</h1>
-      <button onClick={() => dispatch(addCounter())}>PLUS</button>
+      <h1>User List</h1>
+      <div className="buttons-class">
+        <button onClick={() => dispatch(setLanguageFilter("Javascript"))}>
+          JavaScript
+        </button>
+        <button onClick={() => dispatch(setLanguageFilter("React"))}>
+          React
+        </button>
+        <button onClick={() => dispatch(setLanguageFilter("Node"))}>
+          Node
+        </button>
+        <button onClick={() => dispatch(setLanguageFilter("HTML/CSS"))}>
+          HTML&CSS
+        </button>
+        <button onClick={() => dispatch(setLanguageFilter(null))}>
+          Clear Filter
+        </button>
+      </div>
+      <table className="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Registration Date</th>
+            <th>Language</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* Render filtered users */}
+          {users
+            .filter(
+              (user) => !languageFilter || user.language === languageFilter
+            )
+            .map((user) => (
+              <tr key={user.id}>
+                <td>{user.firstName}</td>
+                <td>{user.lastName}</td>
+                <td>
+                  {moment(user.registeredDate).format(
+                    "MMMM Do YYYY, h:mm:ss a"
+                  )}
+                </td>
+                <td>{user.language}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
     </div>
   );
 }

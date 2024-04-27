@@ -1,0 +1,39 @@
+.buttons-class {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+h1 {
+  text-align: center;
+}
+button {
+  padding: 0.5em 50px;
+  border: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+}
+.user-table {
+  margin: 50px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
