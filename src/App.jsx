@@ -1,30 +1,49 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
-import {
-  getCounter,
-  minusCount,
-  plusCount,
-} from "./features/counter/counterSlice";
-import axios from "axios";
-import { saveTodos, deleteTodo, getTodos } from "./features/todos/todosSlice";
+import "./App.scss";
+import { fetchUsers, getUsers, deleteUser } from "./features/users/usersSlice";
+import MainForm from "./components/MainForm/MainForm";
 
 export default function App() {
   const dispatch = useDispatch();
-  const count = useSelector(getCounter);
-  const todos = useSelector(getTodos);
+  const users = useSelector(getUsers);
   useEffect(() => {
-    axios("https://jsonplaceholder.typicode.com/todos?_limit=10").then((res) =>
-      dispatch(saveTodos(res.data))
-    );
+    dispatch(fetchUsers());
   }, []);
+
   return (
     <div className="App">
-      <h1>Count: {count}</h1>
-      <button onClick={() => dispatch(plusCount())}>Plus</button>
-      <button onClick={() => dispatch(minusCount())}>Minus</button>
-      <h1>Todos:{JSON.stringify(todos)}</h1>
-      <button onClick={() => dispatch(deleteTodo())}>Delete last todo</button>
+      <MainForm />
+      <div className="App__usersList">
+        <table>
+          <caption>Our users</caption>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Language</th>
+              <th>Registration Date </th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.data.map((elem) => {
+              return (
+                <tr key={elem.id}>
+                  <td>{elem.id}</td>
+                  <td>{elem.firstName}</td>
+                  <td>{elem.lastName}</td>
+                  <td>{elem.language}</td>
+                  <td>{elem.registredDate}</td>
+                  <td>
+                    <button onClick={() => deleteUser(elem.id)}>Delete</button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

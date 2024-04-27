@@ -1,0 +1,11 @@
+.MainForm {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 320px;
+  }
+}
