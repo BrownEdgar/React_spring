@@ -1,10 +1,22 @@
-.App{
-    color: #fff;
-    font-size: 18px;
-    ul{
-        list-style:disc;
-       
-           
-        
+.App {
+  color: #fff;
+  font-size: 16px;
+  ul {
+    list-style: circle;
+    ::marker {
+      font-size: 32px;
     }
+    height: 600px;
+  }
+  button{
+    padding: 4px 8px;
+    font-size: 18px;
+    margin-top: 15px;
+    border: 2px solid white;
+    border-radius: 16px;
+    color: white;
+    background-color: #0045f5;
+  }
 }
+
+
